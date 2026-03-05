@@ -1,0 +1,145 @@
+/* =========================
+   GENERAL PAGE STYLES
+========================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+
+/* =========================
+   HEADER LAYOUT (CSS GRID)
+========================= */
+
+header {
+
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    align-items: center;
+
+    padding: 1rem;
+    background-color: #f4f4f4;
+
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+header img {
+
+    width: 24px;
+    height: 24px;
+
+}
+
+
+/* =========================
+   SITE NAME
+========================= */
+
+header span {
+
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-left: 10px;
+
+}
+
+
+/* =========================
+   HAMBURGER BUTTON
+========================= */
+
+.hamburger {
+
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+
+}
+
+
+/* Hamburger icon */
+
+.hamburger::before {
+
+    content: "\2630";
+
+}
+
+
+/* Close icon when menu is open */
+
+.hamburger.show::before {
+
+    content: "\00D7";
+
+}
+
+
+/* =========================
+   NAVIGATION MENU
+========================= */
+
+.navigation {
+
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+/* Navigation visible when button clicked */
+
+.navigation.show {
+
+    display: block;
+
+}
+
+
+/* Navigation links */
+
+.navigation li a {
+
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+
+}
+
+
+/* =========================
+   DESKTOP RESPONSIVE DESIGN
+========================= */
+
+@media (min-width: 768px) {
+
+
+    /* Hide hamburger icon */
+
+    .hamburger {
+
+        display: none;
+
+    }
+
+
+    /* Horizontal navigation */
+
+    .navigation {
+
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+
+    }
+
+}
