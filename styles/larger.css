@@ -2,9 +2,25 @@
 
 @media (min-width: 768px) {
 
+    /* Header adjustments for desktop */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 3rem;
+    }
+
+    header span {
+        position: absolute;
+        /* Centers the name relative to the header bar */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2.2rem;
+    }
+
     /* Two-column layout for About Me and Photo */
     .grid {
         grid-template-columns: 2fr 1fr;
+        align-items: start;
     }
 
     /* Courses section spans full width of the grid */

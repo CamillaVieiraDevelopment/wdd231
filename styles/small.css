@@ -4,17 +4,17 @@
     /* Dark backgrounds */
     --accent-color: #ffffff;
     /* White text/icons */
-    --bg-color: #f2f2f2;
+    --bg-color: #fddffa;
     /* Section backgrounds */
     --text-color: #333333;
     /* Standard text */
-    --border-color: #bbbbbb;
+    --border-color: #ffffff;
     /* Borders */
     --button-hover: #555555;
     /* Buttons hover state */
     --heading-font: 'Roboto', sans-serif;
     /* Completed courses */
-    --completed-color: #a4f8b4;
+    --completed-color: #61ffab;
 }
 
 /* ===== GLOBAL STYLES ===== */
@@ -27,11 +27,26 @@ body {
 /* ===== HEADER STYLES ===== */
 header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    /* Stacked on mobile for better centering */
     align-items: center;
     background-color: var(--primary-color);
     color: var(--accent-color);
-    padding: 1rem;
+    padding: 1.5rem;
+    gap: 10px;
+}
+
+header img {
+    width: 80px;
+    /* Increased logo size */
+    height: auto;
+}
+
+header span {
+    font-size: 1.8rem;
+    /* Increased name size */
+    font-weight: bold;
+    text-align: center;
 }
 
 /* ===== MAIN LAYOUT ===== */
@@ -44,11 +59,29 @@ main {
     gap: 1.5rem;
 }
 
+/* -------- About Me Section Styling -------- */
+.grid section:first-of-type p {
+    line-height: 1.4;
+    margin-top: 10px;
+}
+
 /* ===== SECTION STYLES ===== */
 section {
     background-color: var(--bg-color);
     padding: 1.5rem;
     border-radius: 5px;
+    text-align: center;
+    /* Centers content including the profile image */
+}
+
+/* Profile Image Adjustment */
+section img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* Rounded frame */
+    margin-top: 10px;
 }
 
 /* ===== CERTIFICATE COURSES STYLES ===== */
@@ -86,7 +119,7 @@ section {
 }
 
 .course-card {
-    background-color: #e0e0e0;
+    background-color: var(--accent-color);
     padding: 15px 5px;
     border: 1px solid var(--border-color);
     border-radius: 5px;
@@ -112,4 +145,19 @@ footer {
     text-align: center;
     padding: 2rem 1rem;
     margin-top: 2rem;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.social img {
+    width: 35px;
+    /* Standardized size */
+    height: 35px;
+    object-fit: contain;
 }
