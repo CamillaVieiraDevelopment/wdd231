@@ -2,33 +2,20 @@
 
 @media (min-width: 768px) {
 
-
-    /* Horizontal navigation for larger screens */
-
-    .navigation {
-        display: flex;
-        gap: 1rem;
-    }
-
-
-    /* Hide hamburger menu */
-
-    #menu {
-        display: none;
-    }
-
-
-    /* Two-column layout */
-
+    /* Two-column layout for About Me and Photo */
     .grid {
         grid-template-columns: 2fr 1fr;
     }
 
-
-    /* Courses section spans full width */
-
+    /* Courses section spans full width of the grid */
     .courses {
         grid-column: span 2;
     }
 
+    /* Centering the course grid on larger screens */
+    #course-container {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

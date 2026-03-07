@@ -1,7 +1,37 @@
+/* ===== GLOBAL VARIABLES ===== */
+:root {
+    --primary-color: #222222;
+    /* Dark backgrounds */
+    --secondary-color: #ffd700;
+    /* Gold/Yellow for completed courses */
+    --accent-color: #ffffff;
+    /* White text/icons */
+    --bg-color: #f2f2f2;
+    /* Section backgrounds */
+    --text-color: #333333;
+    /* Standard text */
+    --border-color: #bbbbbb;
+    /* Borders */
+    --button-hover: #555555;
+    /* Buttons hover state */
+    --heading-font: 'Roboto', sans-serif;
+}
+
 /* ===== GLOBAL STYLES ===== */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--heading-font);
     margin: 0;
+    color: var(--text-color);
+}
+
+/* ===== HEADER STYLES ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 1rem;
 }
 
 /* ===== MAIN LAYOUT ===== */
@@ -16,7 +46,7 @@ main {
 
 /* ===== SECTION STYLES ===== */
 section {
-    background: #f2f2f2;
+    background-color: var(--bg-color);
     padding: 1.5rem;
     border-radius: 5px;
 }
@@ -24,13 +54,11 @@ section {
 /* ===== CERTIFICATE COURSES STYLES ===== */
 .courses {
     text-align: center;
-    /* Centralizes title and total credits */
 }
 
 .buttons {
     display: flex;
     justify-content: center;
-    /* Centralizes buttons */
     gap: 10px;
     margin-bottom: 20px;
 }
@@ -38,17 +66,18 @@ section {
 .buttons button {
     padding: 10px 20px;
     border: none;
-    background-color: #333;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
     border-radius: 4px;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
 .buttons button:hover {
-    background-color: #555;
+    background-color: var(--button-hover);
 }
 
-/* Course Grid: 3 columns per row */
+/* Course Grid Layout */
 #course-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -59,20 +88,28 @@ section {
 .course-card {
     background-color: #e0e0e0;
     padding: 15px 5px;
-    border: 1px solid #bbb;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
     font-weight: bold;
 }
 
-/* Visual indicator for completed courses */
+/* Style for completed courses using global variable */
 .course-card.completed {
-    background-color: #ffd700;
-    /* Yellow/Gold as per some BYU examples */
-    color: #333;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 #total {
     font-weight: bold;
     font-size: 1.1rem;
     margin-top: 10px;
+}
+
+/* ===== FOOTER STYLES ===== */
+footer {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
 }
