@@ -1,0 +1,115 @@
+/* ===== GLOBAL STYLES ===== */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+
+/* ===== HEADER STYLES ===== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: white;
+    padding: 1rem;
+}
+
+
+/* ===== HAMBURGER MENU BUTTON ===== */
+
+#menu {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+}
+
+
+/* ===== MOBILE NAVIGATION ===== */
+
+.navigation {
+    display: none;
+    list-style: none;
+    padding: 0;
+}
+
+.navigation.open {
+    display: block;
+}
+
+.navigation li {
+    padding: .5rem;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* ===== MAIN LAYOUT ===== */
+
+main {
+    padding: 1rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+}
+
+
+/* ===== SECTION STYLES ===== */
+
+section {
+    background: #f2f2f2;
+    padding: 1rem;
+}
+
+
+/* ===== IMAGE STYLES ===== */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ===== COURSE FILTER BUTTONS ===== */
+
+.buttons {
+    display: flex;
+    gap: .5rem;
+    margin-bottom: 1rem;
+}
+
+
+/* ===== COURSE CARDS ===== */
+
+#course-container div {
+    padding: .5rem;
+    margin: .25rem;
+    background: #ddd;
+    text-align: center;
+}
+
+
+/* Completed course styling */
+
+.completed {
+    background: #2e7d32;
+    color: white;
+}
+
+
+/* ===== FOOTER STYLES ===== */
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #222;
+    color: white;
+}

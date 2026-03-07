@@ -1,0 +1,34 @@
+/* ===== RESPONSIVE LAYOUT (TABLET / DESKTOP) ===== */
+
+@media (min-width: 768px) {
+
+
+    /* Horizontal navigation for larger screens */
+
+    .navigation {
+        display: flex;
+        gap: 1rem;
+    }
+
+
+    /* Hide hamburger menu */
+
+    #menu {
+        display: none;
+    }
+
+
+    /* Two-column layout */
+
+    .grid {
+        grid-template-columns: 2fr 1fr;
+    }
+
+
+    /* Courses section spans full width */
+
+    .courses {
+        grid-column: span 2;
+    }
+
+}
