@@ -1,0 +1,83 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: white;
+    padding: 1rem;
+}
+
+#menu {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+}
+
+.navigation {
+    display: none;
+    list-style: none;
+    padding: 0;
+}
+
+.navigation.open {
+    display: block;
+}
+
+.navigation li {
+    padding: .5rem;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 1rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+}
+
+section {
+    background: #f2f2f2;
+    padding: 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.buttons {
+    display: flex;
+    gap: .5rem;
+    margin-bottom: 1rem;
+}
+
+#course-container div {
+    padding: .5rem;
+    margin: .25rem;
+    background: #ddd;
+    text-align: center;
+}
+
+.completed {
+    background: #2e7d32;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #222;
+    color: white;
+}
