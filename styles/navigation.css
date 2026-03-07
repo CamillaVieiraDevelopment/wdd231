@@ -1,5 +1,4 @@
 /* ===== MOBILE NAVIGATION ===== */
-
 .navigation {
     display: none;
     list-style: none;
@@ -11,10 +10,34 @@
     display: block;
 }
 
+/* ===== HAMBURGER BUTTON ===== */
+#nav-button {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+#nav-button::before {
+    content: "☰";
+    /* Hamburger icon */
+}
+
+#nav-button.open::before {
+    content: "✖";
+    /* Close icon */
+}
+
+/* ===== WAYFINDING ===== */
+.navigation a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+
 /* ===== DESKTOP NAVIGATION ===== */
-
 @media (min-width: 768px) {
-
     .navigation {
         display: flex;
         gap: 1rem;
@@ -23,27 +46,4 @@
     #nav-button {
         display: none;
     }
-
-}
-
-
-/* ===== HAMBURGER BUTTON ===== */
-
-#nav-button {
-    font-size: 2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-/* hamburger icon */
-
-#nav-button::before {
-    content: "☰";
-}
-
-/* close icon when open */
-
-#nav-button.open::before {
-    content: "✖";
 }

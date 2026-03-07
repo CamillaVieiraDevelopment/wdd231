@@ -1,98 +1,49 @@
 /* ===== COURSE DATA ARRAY ===== */
-
 const courses = [
-
-    {
-        code: "WDD 130",
-        subject: "WDD",
-        credits: 2,
-        completed: true
-    },
-
-    {
-        code: "WDD 131",
-        subject: "WDD",
-        credits: 2,
-        completed: true
-    },
-
-    {
-        code: "WDD 231",
-        subject: "WDD",
-        credits: 2,
-        completed: false
-    }
-
+    { code: "CSE 110", subject: "CSE", credits: 2, completed: true },
+    { code: "WDD 130", subject: "WDD", credits: 2, completed: true },
+    { code: "CSE 111", subject: "CSE", credits: 2, completed: true },
+    { code: "CSE 210", subject: "CSE", credits: 2, completed: false },
+    { code: "WDD 131", subject: "WDD", credits: 2, completed: true },
+    { code: "WDD 231", subject: "WDD", credits: 2, completed: false }
 ];
 
-
 /* ===== SELECT HTML ELEMENTS ===== */
-
 const container = document.querySelector("#course-container");
-const totalCredits = document.querySelector("#total");
-
+const totalCreditsDisplay = document.querySelector("#total");
 
 /* ===== FUNCTION TO DISPLAY COURSES ===== */
-
-function displayCourses(courseList) {
-
+function displayCourses(filteredCourses) {
     container.innerHTML = "";
 
-
-    /* Loop through courses */
-
-    courseList.forEach(course => {
-
+    filteredCourses.forEach(course => {
         const card = document.createElement("div");
-
+        card.className = "course-card";
         card.textContent = course.code;
-
-
-        /* Style completed courses */
 
         if (course.completed) {
             card.classList.add("completed");
         }
-
         container.appendChild(card);
-
     });
 
-
-    /* ===== CALCULATE TOTAL CREDITS ===== */
-
-    const credits = courseList.reduce((sum, course) => sum + course.credits, 0);
-
-    totalCredits.textContent = `Total Credits: ${credits}`;
-
+    /* ===== CALCULATE TOTAL CREDITS USING REDUCE ===== */
+    const total = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
+    totalCreditsDisplay.textContent = `Total Credits: ${total}`;
 }
 
-
-/* ===== INITIAL COURSE DISPLAY ===== */
-
-displayCourses(courses);
-
-
 /* ===== FILTER BUTTON EVENTS ===== */
-
-document.querySelector("#all").addEventListener("click", () => {
-    displayCourses(courses);
-});
-
+document.querySelector("#all").addEventListener("click", () => displayCourses(courses));
 
 document.querySelector("#wdd").addEventListener("click", () => {
-
-    const wdd = courses.filter(course => course.subject === "WDD");
-
-    displayCourses(wdd);
-
+    const wddCourses = courses.filter(course => course.subject === "WDD");
+    displayCourses(wddCourses);
 });
-
 
 document.querySelector("#cse").addEventListener("click", () => {
-
-    const cse = courses.filter(course => course.subject === "CSE");
-
-    displayCourses(cse);
-
+    const cseCourses = courses.filter(course => course.subject === "CSE");
+    displayCourses(cseCourses);
 });
+
+/* ===== INITIAL COURSE DISPLAY ===== */
+displayCourses(courses);
