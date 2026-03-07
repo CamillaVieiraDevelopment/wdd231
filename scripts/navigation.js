@@ -5,6 +5,7 @@ const navigation = document.querySelector(".navigation");
 /* ===== TOGGLE NAVIGATION ===== */
 if (navButton && navigation) {
     navButton.addEventListener("click", () => {
+        // Toggle the 'open' class on both the menu and the button
         navigation.classList.toggle("open");
         navButton.classList.toggle("open");
     });

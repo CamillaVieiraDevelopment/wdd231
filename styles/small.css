@@ -1,115 +1,78 @@
 /* ===== GLOBAL STYLES ===== */
-
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
 }
 
-
-/* ===== HEADER STYLES ===== */
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #222;
-    color: white;
-    padding: 1rem;
-}
-
-
-/* ===== HAMBURGER MENU BUTTON ===== */
-
-#menu {
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: white;
-}
-
-
-/* ===== MOBILE NAVIGATION ===== */
-
-.navigation {
-    display: none;
-    list-style: none;
-    padding: 0;
-}
-
-.navigation.open {
-    display: block;
-}
-
-.navigation li {
-    padding: .5rem;
-}
-
-.navigation a {
-    color: white;
-    text-decoration: none;
-}
-
-
 /* ===== MAIN LAYOUT ===== */
-
 main {
     padding: 1rem;
 }
 
 .grid {
     display: grid;
-    gap: 1rem;
+    gap: 1.5rem;
 }
-
 
 /* ===== SECTION STYLES ===== */
-
 section {
     background: #f2f2f2;
-    padding: 1rem;
+    padding: 1.5rem;
+    border-radius: 5px;
 }
 
-
-/* ===== IMAGE STYLES ===== */
-
-img {
-    max-width: 100%;
-    height: auto;
+/* ===== CERTIFICATE COURSES STYLES ===== */
+.courses {
+    text-align: center;
+    /* Centralizes title and total credits */
 }
-
-
-/* ===== COURSE FILTER BUTTONS ===== */
 
 .buttons {
     display: flex;
-    gap: .5rem;
-    margin-bottom: 1rem;
+    justify-content: center;
+    /* Centralizes buttons */
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-
-/* ===== COURSE CARDS ===== */
-
-#course-container div {
-    padding: .5rem;
-    margin: .25rem;
-    background: #ddd;
-    text-align: center;
-}
-
-
-/* Completed course styling */
-
-.completed {
-    background: #2e7d32;
+.buttons button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
     color: white;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
+.buttons button:hover {
+    background-color: #555;
+}
 
-/* ===== FOOTER STYLES ===== */
+/* Course Grid: 3 columns per row */
+#course-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
 
-footer {
-    text-align: center;
-    padding: 1rem;
-    background: #222;
-    color: white;
+.course-card {
+    background-color: #e0e0e0;
+    padding: 15px 5px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Visual indicator for completed courses */
+.course-card.completed {
+    background-color: #ffd700;
+    /* Yellow/Gold as per some BYU examples */
+    color: #333;
+}
+
+#total {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 10px;
 }

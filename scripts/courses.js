@@ -29,20 +29,18 @@ function displayCourses(filteredCourses) {
 
     /* ===== CALCULATE TOTAL CREDITS USING REDUCE ===== */
     const total = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
-    totalCreditsDisplay.textContent = `Total Credits: ${total}`;
+    totalCreditsDisplay.textContent = `The total credits for the courses listed above is: ${total}`;
 }
 
 /* ===== FILTER BUTTON EVENTS ===== */
 document.querySelector("#all").addEventListener("click", () => displayCourses(courses));
 
 document.querySelector("#wdd").addEventListener("click", () => {
-    const wddCourses = courses.filter(course => course.subject === "WDD");
-    displayCourses(wddCourses);
+    displayCourses(courses.filter(course => course.subject === "WDD"));
 });
 
 document.querySelector("#cse").addEventListener("click", () => {
-    const cseCourses = courses.filter(course => course.subject === "CSE");
-    displayCourses(cseCourses);
+    displayCourses(courses.filter(course => course.subject === "CSE"));
 });
 
 /* ===== INITIAL COURSE DISPLAY ===== */
