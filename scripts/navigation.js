@@ -1,35 +1,33 @@
 /* ===== SELECT ELEMENTS ===== */
 
-const menuButton = document.querySelector("#menu");
+const navButton = document.querySelector("#nav-button");
 const navigation = document.querySelector(".navigation");
 
-navButton.addEventListener("click", () => {
 
-    navButton.classList.toggle("show");
-    navMenu.classList.toggle("show");
+/* ===== TOGGLE NAVIGATION ===== */
 
-});
+if (navButton && navigation) {
+
+    navButton.addEventListener("click", () => {
+
+        navigation.classList.toggle("open");
+        navButton.classList.toggle("open");
+
+    });
+
+}
 
 
-/* =========================
-TOGGLE MOBILE MENU 
-========================= */
+/* ===== FOOTER DYNAMIC DATES ===== */
 
-menuButton.addEventListener("click", () => {
+const year = document.querySelector("#currentyear");
 
-    navigation.classList.toggle("open");
-
-});
-
-/* =========================
-   FOOTER DYNAMIC DATES
-========================= */
-
-const year = document.querySelector("#year");
-
-year.textContent = new Date().getFullYear();
-
+if (year) {
+    year.textContent = new Date().getFullYear();
+}
 
 const lastModified = document.querySelector("#lastModified");
 
-lastModified.textContent = "Last Modified: " + document.lastModified;
+if (lastModified) {
+    lastModified.textContent = "Last Modified: " + document.lastModified;
+}

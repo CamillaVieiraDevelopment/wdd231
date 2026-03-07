@@ -3,103 +3,109 @@
 
 <head>
 
-    <!-- ===== BASIC PAGE METADATA ===== -->
+    <!-- ===== BASIC META ===== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>WDD231 | Camilla Vieira</title>
-    <meta name="description" content="Course home page for WDD231">
-    <meta name="author" content="Camilla Vieira">
+    <title>Camilla Vieira | WDD231</title>
 
-    <!-- ===== STYLESHEETS ===== -->
+    <!-- ===== STYLES ===== -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+
 
     <!-- ===== GOOGLE FONT ===== -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <!-- ===== JAVASCRIPT FILES ===== -->
+    <!-- ===== JAVASCRIPT ===== -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/courses.js" defer></script>
 
 </head>
 
-
 <body>
 
-    <!-- ===== HEADER SECTION ===== -->
+    <!-- ===== HEADER ===== -->
+
     <header>
 
-        <!-- Site logo / name -->
-        <div class="logo">
-            <span>Camilla Vieira</span>
-        </div>
+        <img src="images/weather.svg" alt="Site Logo">
 
-        <!-- Hamburger menu button (mobile view) -->
-        <button id="menu"></button>
+        <span>Camilla Vieira</span>
 
-        <!-- Main navigation -->
-        <nav>
-            <ul class="navigation">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Chamber</a></li>
-                <li><a href="#">Final</a></li>
-            </ul>
-        </nav>
+        <button id="nav-button" class="hamburger" aria-label="navigation"></button>
 
     </header>
 
 
+    <!-- ===== NAVIGATION ===== -->
+
+    <nav>
+
+        <ul class="navigation">
+
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Assignments</a></li>
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+
     <!-- ===== MAIN CONTENT ===== -->
+
     <main>
 
-        <!-- Main page title -->
         <h1>Home</h1>
 
-        <!-- Layout grid -->
         <div class="grid">
 
-            <!-- ===== ABOUT ME SECTION ===== -->
+            <!-- ===== ABOUT ME ===== -->
+
             <section>
 
                 <h2>About Me</h2>
 
                 <p>
                     I am currently studying Software Development and building my skills in
-                    HTML, CSS and JavaScript while developing web applications.
+                    HTML, CSS, and JavaScript while developing web applications.
                 </p>
 
             </section>
 
 
-            <!-- ===== STUDENT PHOTO SECTION ===== -->
+            <!-- ===== STUDENT PHOTO ===== -->
+
             <section>
 
                 <h2>Student Photo</h2>
 
-                <img src="images/profile.jpg" alt="Student photo">
+                <img src="images/profile.jpg" alt="Student Photo">
 
             </section>
 
 
-            <!-- ===== COURSE CERTIFICATE SECTION ===== -->
+            <!-- ===== CERTIFICATE COURSES ===== -->
+
             <section class="courses">
 
                 <h2>Web Certificate Courses</h2>
 
-                <!-- Filter buttons -->
                 <div class="buttons">
+
                     <button id="all">All</button>
                     <button id="cse">CSE</button>
                     <button id="wdd">WDD</button>
+
                 </div>
 
-                <!-- Dynamic course cards container -->
                 <div id="course-container"></div>
 
-                <!-- Dynamic credit counter -->
                 <p id="total"></p>
 
             </section>
@@ -109,22 +115,30 @@
     </main>
 
 
-    <!-- ===== FOOTER SECTION ===== -->
+    <!-- ===== FOOTER ===== -->
+
     <footer>
 
-        <!-- Social media links -->
         <div class="social">
-            <a href="https://github.com" target="_blank">GitHub</a>
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-            <a href="#">X</a>
+
+            <a href="https://github.com" target="_blank">
+                <img src="images/github.svg" alt="GitHub">
+            </a>
+
+            <a href="https://linkedin.com" target="_blank">
+                <img src="images/linkedin.svg" alt="LinkedIn">
+            </a>
+
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram.svg" alt="Instagram">
+            </a>
+
         </div>
 
-        <!-- Copyright information -->
         <p>
             © <span id="currentyear"></span> Camilla Vieira | Brazil
         </p>
 
-        <!-- Last modified date -->
         <p id="lastModified"></p>
 
     </footer>

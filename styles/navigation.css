@@ -1,0 +1,49 @@
+/* ===== MOBILE NAVIGATION ===== */
+
+.navigation {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation.open {
+    display: block;
+}
+
+/* ===== DESKTOP NAVIGATION ===== */
+
+@media (min-width: 768px) {
+
+    .navigation {
+        display: flex;
+        gap: 1rem;
+    }
+
+    #nav-button {
+        display: none;
+    }
+
+}
+
+
+/* ===== HAMBURGER BUTTON ===== */
+
+#nav-button {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* hamburger icon */
+
+#nav-button::before {
+    content: "☰";
+}
+
+/* close icon when open */
+
+#nav-button.open::before {
+    content: "✖";
+}
