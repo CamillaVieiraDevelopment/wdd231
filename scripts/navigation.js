@@ -12,7 +12,7 @@ navButton.addEventListener("click", () => {
 
 
 /* =========================
-TOGGLE MOBILE MENU ===== */
+TOGGLE MOBILE MENU 
 ========================= */
 
 menuButton.addEventListener("click", () => {
