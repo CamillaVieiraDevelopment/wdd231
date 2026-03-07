@@ -22,7 +22,7 @@
 /* Wayfinding - Active Link */
 .navigation a.active {
     background-color: rgba(46, 195, 93, 0.1);
-    border-bottom: 5px solid rgba(242, 242, 35);
+    border-bottom: 5px solid rgb(195, 6, 213);
 }
 
 /* ===== HAMBURGER BUTTON ===== */
