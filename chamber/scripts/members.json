@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Tech Solutions",
+        "address": "123 Innovation St",
+        "phone": "555-111-2222",
+        "website": "https://techsolutions.com",
+        "image": "tech.jpg",
+        "membership": 3
+    },
+    {
+        "name": "Green Market",
+        "address": "45 Eco Road",
+        "phone": "555-333-4444",
+        "website": "https://greenmarket.com",
+        "image": "market.jpg",
+        "membership": 2
+    },
+    {
+        "name": "City Coffee",
+        "address": "9 Downtown Ave",
+        "phone": "555-555-7777",
+        "website": "https://citycoffee.com",
+        "image": "coffee.jpg",
+        "membership": 1
+    },
+    {
+        "name": "Urban Fitness",
+        "address": "88 Health Blvd",
+        "phone": "555-888-9999",
+        "website": "https://urbanfitness.com",
+        "image": "fitness.jpg",
+        "membership": 2
+    },
+    {
+        "name": "Creative Studio",
+        "address": "12 Art Street",
+        "phone": "555-444-8888",
+        "website": "https://creativestudio.com",
+        "image": "studio.jpg",
+        "membership": 3
+    },
+    {
+        "name": "Smart Electronics",
+        "address": "100 Tech Park",
+        "phone": "555-666-1111",
+        "website": "https://smartelectronics.com",
+        "image": "electronics.jpg",
+        "membership": 1
+    },
+    {
+        "name": "Golden Bakery",
+        "address": "56 Bread Lane",
+        "phone": "555-777-2222",
+        "website": "https://goldenbakery.com",
+        "image": "bakery.jpg",
+        "membership": 3
+    }
+]

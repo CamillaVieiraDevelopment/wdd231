@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>City Chamber Directory</title>
+    <meta name="description" content="Chamber of Commerce Business Directory">
+    <meta name="author" content="Camilla Vieira">
+
+    <!-- Facebook Open Graph -->
+    <meta property="og:title" content="City Chamber Directory">
+    <meta property="og:description" content="Business members of the local Chamber of Commerce">
+    <meta property="og:image" content="images/chamber.png">
+    <meta property="og:url" content="https://yourusername.github.io/wdd231/chamber/directory.html">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/small.css">
+
+    <script defer src="scripts/footer.js"></script>
+    <script defer src="scripts/members.js"></script>
+    <script defer src="scripts/members.json"></script>
+
+
+</head>
+
+<body>
+
+    <header>
+        <h1>City Chamber of Commerce</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <h2>Business Directory</h2>
+
+        <div class="menu">
+            <button id="grid">Grid</button>
+            <button id="list">List</button>
+        </div>
+
+        <section id="members" class="grid"></section>
+
+    </main>
+
+    <footer>
+
+        <p>Contact: info@citychamber.org</p>
+
+        <p>
+            © <span id="year"></span> Camilla Vieira | WDD231
+        </p>
+
+        <p>
+            Last Modification: <span id="lastModified"></span>
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
