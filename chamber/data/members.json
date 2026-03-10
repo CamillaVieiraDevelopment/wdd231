@@ -16,11 +16,11 @@
         "membership": 2
     },
     {
-        "name": "City Coffee",
+        "name": "City Bakery",
         "address": "9 Downtown Ave",
         "phone": "555-555-7777",
-        "website": "https://citycoffee.com",
-        "image": "coffee.jpg",
+        "website": "https://citybakery.com",
+        "image": "bakery.jpg",
         "membership": 1
     },
     {
