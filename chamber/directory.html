@@ -2,49 +2,39 @@
 <html lang="en">
 
 <head>
-    <!-- =========================================
-         META INFORMATION
-    ========================================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>City Chamber of Commerce Business Directory</title>
 
-    <!-- SEO Metadata -->
-    <meta name="description" content="Explore the City Chamber of Commerce Business Directory to discover trusted local companies, services, and partners supporting our community.">
+    <meta name="description"
+        content="Explore the official City Chamber of Commerce Business Directory. Find trusted local businesses, professional services, and community partners here.">
 
     <meta name="author" content="Camilla Vieira">
 
-    <!-- Open Graph Metadata -->
-    <meta property="og:title" content="City Chamber of Commerce Business Directory">
-    <meta property="og:description" content="Discover trusted businesses and services through the City Chamber of Commerce directory and connect with organizations that support our local economy.">
+    <meta property="og:title" content="Business Directory | City Chamber of Commerce">
+    <meta property="og:description"
+        content="Connect with our local business community. Browse our directory to find verified members and services supporting our local economy.">
     <meta property="og:image" content="https://camillavieiradevelopment.github.io/wdd231/chamber/images/chamber.png">
     <meta property="og:url" content="https://camillavieiradevelopment.github.io/wdd231/chamber/directory.html">
 
-    <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
-    <!-- JavaScript -->
     <script defer src="scripts/footer.js"></script>
     <script defer src="scripts/members.js"></script>
 
 </head>
+
 <body>
 
-    <!-- =========================================
-         HEADER / NAVIGATION
-    ========================================== -->
     <header>
         <nav>
             <ul>
@@ -56,59 +46,36 @@
         </nav>
     </header>
 
-    <!-- =========================================
-         MAIN CONTENT
-    ========================================== -->
     <main>
-
-        <!-- Main heading required inside <main> -->
         <h1>City Chamber of Commerce</h1>
-
-        <!-- Section heading -->
         <h2>Business Directory</h2>
 
-        <!-- View toggle buttons -->
         <div class="menu">
-            <button id="grid">Grid</button>
-            <button id="list">List</button>
+            <button id="grid">Grid View</button>
+            <button id="list">List View</button>
         </div>
 
-        <!-- Business members will be dynamically inserted here -->
         <section id="members" class="grid"></section>
-
     </main>
 
-    <!-- =========================================
-         FOOTER
-    ========================================== -->
     <footer>
-
-        <!-- Social media links -->
         <div class="social">
             <a href="https://github.com" target="_blank">
-                <img src="images/github_logo.webp" alt="GitHub social media link">
+                <img src="images/github_logo.webp" alt="Visit our GitHub profile">
             </a>
-
             <a href="https://linkedin.com" target="_blank">
-                <img src="images/linkedin_logo.webp" alt="LinkedIn professional network link">
+                <img src="images/linkedin_logo.webp" alt="Follow us on LinkedIn">
             </a>
-
             <a href="https://instagram.com" target="_blank">
-                <img src="images/instagram_logo.png" alt="Instagram social media link">
+                <img src="images/instagram_logo.png" alt="View our Instagram photos">
             </a>
         </div>
 
-        <!-- Copyright information -->
         <p>&copy; <span id="currentyear"></span> Camilla Vieira | Brazil</p>
-
-        <!-- Last modified date generated via JavaScript -->
         <p id="lastModified"></p>
-
         <p>Contact: info@citychamber.org</p>
-
     </footer>
 
 </body>
 
 </html>
-```
