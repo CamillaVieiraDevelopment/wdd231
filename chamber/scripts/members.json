@@ -1,0 +1,59 @@
+[
+    {
+        "name": "Olist",
+        "address": "Av. Cândido de Abreu, 470 - Centro Cívico, Curitiba - PR",
+        "phone": "+55 41 3097-9400",
+        "website": "https://olist.com",
+        "image": "olist.jpg",
+        "membership": 3
+    },
+    {
+        "name": "MadeiraMadeira",
+        "address": "Rua Marechal Deodoro, 630 - Centro, Curitiba - PR",
+        "phone": "+55 41 3003-4331",
+        "website": "https://www.madeiramadeira.com.br",
+        "image": "madeira_madeira.jpg",
+        "membership": 3
+    },
+    {
+        "name": "EBANX",
+        "address": "Rua Marechal Deodoro, 630 - Centro, Curitiba - PR",
+        "phone": "+55 41 3044-8500",
+        "website": "https://www.ebanx.com",
+        "image": "ebanx.jpg",
+        "membership": 3
+    },
+    {
+        "name": "Supermercados Condor",
+        "address": "Av. Winston Churchill, 2170 - Capão Raso, Curitiba - PR",
+        "phone": "+55 41 3218-7000",
+        "website": "https://www.condor.com.br",
+        "image": "condor.jpg",
+        "membership": 2
+    },
+    {
+        "name": "Jacomar Supermercados",
+        "address": "Av. Marechal Floriano Peixoto, 9696 - Boqueirão, Curitiba - PR",
+        "phone": "+55 41 3286-5000",
+        "website": "https://www.jacomar.com.br",
+        "image": "jacomar.jpg",
+        "membership": 2
+    },
+    
+       {
+        "name": "Cobasi",
+        "address": "Av. Pres. Kennedy, 4121 - Portão, Curitiba - PR",
+        "phone": "+55 41 3026-1515",
+        "website": "https://www.cobasi.com.br",
+        "image": "cobasi.jpg",
+        "membership": 1
+    },
+    {
+        "name": "Lanchonete Dois Corações",
+        "address": "Av. Marechal Floriano Peixoto, 5890 - Hauer, Curitiba - PR",
+        "phone": "+55 41 3276-6060",
+        "website": "",
+        "image": "dois_corações.jpg",
+        "membership": 1
+    }
+]
