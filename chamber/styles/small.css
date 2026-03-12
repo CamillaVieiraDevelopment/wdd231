@@ -6,7 +6,7 @@
 
     /* Fonts */
     --font-primary: 'Roboto', sans-serif;
-   
+
     /* Colors */
     --color-primary: #003366;
     --color-white: #ffffff;
@@ -23,7 +23,6 @@
 ========================================= */
 
 body {
-    
     font-family: var(--font-primary);
     margin: 0;
 }
@@ -61,8 +60,13 @@ nav a {
    MAIN CONTENT
 ========================================= */
 
-main {
-    padding: var(--space-sm);
+/* Center main headings */
+main h1,
+main h2 {
+    text-align: center;
+}
+main h1 {
+    margin-top: 0;
 }
 
 .menu {
