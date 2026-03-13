@@ -1,35 +1,44 @@
+/* =========================================
+   DESKTOP STYLES
+========================================= */
 @media screen and (min-width: 640px) {
 
-    /* Hide hamburger on larger screens */
     #menu {
         display: none;
+        /* Hide hamburger on desktop */
     }
 
     header {
         flex-direction: row;
         justify-content: space-between;
+        padding: 1rem 5%;
     }
 
-    /* Force navigation to show horizontally */
+    .logo-container {
+        margin-bottom: 0;
+    }
+
     .navigation {
         display: flex !important;
+        /* Force show */
         flex-direction: row;
-        justify-content: center;
-        gap: 2rem;
+        width: auto;
     }
 
-    nav ul {
-        list-style: none;
-        padding: 0;
+    .navigation li a {
+        border-top: none;
+        padding: 0.5rem 1rem;
     }
 
     #members.grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
-    .card img {
-        max-height: 120px;
-        object-fit: contain;
+    /* List View adjustments for Desktop */
+    #members.list .card {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        align-items: center;
+        text-align: left;
     }
-
 }
