@@ -11,7 +11,8 @@
     --color-primary: #003366;
     --color-white: #ffffff;
     --color-border: #bccfeb;
-    --color-card-bg: #f9f9f9;
+    --color-card-bg: #c9e2fc;
+    --color-button: #0f6bc7;
 
     /* Spacing */
     --space-xs: 0.5rem;
@@ -142,6 +143,20 @@ main h1 {
     text-align: center;
 }
 
+.menu button {
+    background-color: var(--color-button);
+    color: var(--color-white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--font-primary);
+}
+
+.menu button:hover {
+    background-color: var(--color-primary);
+}
+
 /* =========================================
    DIRECTORY LAYOUT
 ========================================= */
@@ -217,5 +232,5 @@ footer {
 }
 
 #members.list .card:nth-child(even) {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: var(--color-card-bg)
 }
