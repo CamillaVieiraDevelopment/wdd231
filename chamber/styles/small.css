@@ -38,6 +38,39 @@ header {
     text-align: center;
 }
 
+header {
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: var(--space-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Circular Frame for Logo */
+.logo-container img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-white);
+}
+
+/* Stilization for title of header */
+.logo-container span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
 /* =========================================
    NAVIGATION
 ========================================= */
