@@ -35,17 +35,14 @@ header {
     background: var(--color-primary);
     color: var(--color-white);
     padding: var(--space-sm);
-    text-align: center;
-}
-
-header {
-    background: var(--color-primary);
-    color: var(--color-white);
-    padding: var(--space-sm);
     display: flex;
+    flex-direction: column;
+    /* Stacked for mobile to accommodate absolute menu */
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
+    position: relative;
+    /* Base for absolute menu */
 }
 
 .logo-container {
@@ -71,22 +68,59 @@ header {
     text-transform: uppercase;
 }
 
+/* --- Hamburger Menu Button --- */
+#menu {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #c5c8f1;
+    border: none;
+    background: none;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+#menu.show::before {
+    content: "X";
+}
+
 /* =========================================
    NAVIGATION
 ========================================= */
 
-nav ul {
+nav {
+    width: 100%;
+}
+
+.navigation {
     list-style: none;
     padding: 0;
+    display: none;
+    /* Hidden by default on small screens */
+    flex-direction: column;
+    text-align: center;
+}
+
+.navigation.show {
+    display: flex;
+    /* Shown when toggle is active */
 }
 
 nav li {
     margin: var(--space-xs) 0;
+    padding: 0.5rem;
 }
 
 nav a {
     color: var(--color-white);
     text-decoration: none;
+    font-weight: bold;
+    display: block;
 }
 
 /* =========================================
@@ -98,12 +132,14 @@ main h1,
 main h2 {
     text-align: center;
 }
+
 main h1 {
     margin-top: 0;
 }
 
 .menu {
     margin-bottom: var(--space-sm);
+    text-align: center;
 }
 
 /* =========================================
@@ -158,10 +194,8 @@ footer {
 .social img {
     width: 35px;
     height: 35px;
-    
-}
 
-/* Esconde as imagens quando o container tiver a classe .list */
+}
 #members.list .card img {
     display: none;
 }
@@ -179,32 +213,9 @@ footer {
     padding: 0.5rem;
     background-color: transparent;
     border-radius: 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #b8c6e6;
 }
 
 #members.list .card:nth-child(even) {
     background-color: rgba(0, 0, 0, 0.05);
-}
-
-/* =========================================
-   RESPONSIVE (LARGER SCREENS)
-========================================= */
-
-@media screen and (min-width: 640px) {
-
-    nav ul {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-    }
-
-    #members.grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .card img {
-        max-height: 120px;
-        object-fit: contain;
-    }
-
 }

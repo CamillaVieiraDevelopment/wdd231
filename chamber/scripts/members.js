@@ -59,10 +59,11 @@ listbutton.addEventListener("click", () => {
     cards.classList.remove("grid")
 })
 
-const navButton = document.querySelector('#nav-button');
+/* --- Hamburger Menu Logic --- */
+const menuButton = document.querySelector('#menu');
 const navigation = document.querySelector('.navigation');
 
-navButton.addEventListener('click', () => {
-    navButton.classList.toggle('open');
-    navigation.classList.toggle('open');
+menuButton.addEventListener('click', () => {
+    menuButton.classList.toggle('show');
+    navigation.classList.toggle('show');
 });
