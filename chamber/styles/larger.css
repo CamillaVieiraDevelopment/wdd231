@@ -5,7 +5,6 @@
 
     #menu {
         display: none;
-        /* Hide hamburger on desktop */
     }
 
     header {
@@ -20,7 +19,6 @@
 
     .navigation {
         display: flex !important;
-        /* Force show */
         flex-direction: row;
         width: auto;
     }

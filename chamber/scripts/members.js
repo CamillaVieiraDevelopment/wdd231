@@ -16,7 +16,7 @@ async function getMembers() {
 getMembers();
 
 function displayMembers(members) {
-    cards.innerHTML = ""; // Clear current content
+    cards.innerHTML = ""; 
 
     members.forEach(member => {
         let card = document.createElement("section");
@@ -72,7 +72,7 @@ const menuButton = document.querySelector('#menu');
 const navList = document.querySelector('.navigation');
 
 menuButton.addEventListener('click', (e) => {
-    e.preventDefault(); // Prevent jump to top of page
+    e.preventDefault(); 
     menuButton.classList.toggle('show');
     navList.classList.toggle('show');
 });

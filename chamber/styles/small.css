@@ -126,7 +126,6 @@ h1 {
     margin-bottom: 1.5rem;
 }
 
-/* Estilização para corrigir a cor e contraste dos botões de View */
 .menu-controls button {
     background-color: var(--color-primary);
     color: var(--color-white);
@@ -181,7 +180,6 @@ h1 {
 
 #members.list .card img {
     display: none;
-    /* Hide images in list view on mobile */
 }
 
 /* =========================================
