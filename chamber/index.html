@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Câmara de Comércio de Curitiba</title>
+    <meta name="description"
+        content="Bem-vindo à Câmara de Comércio de Curitiba. Promovendo o crescimento econômico e apoiando empresas locais.">
+    <meta name="author" content="Camilla Vieira">
+
+    <meta property="og:title" content="Câmara de Comércio de Curitiba - Home">
+    <meta property="og:description" content="Conecte-se com o ambiente de negócios de Curitiba.">
+    <meta property="og:image" content="images/chamber_logo.png">
+    <meta property="og:url" content="https://camillavieiradevelopment.github.io/wdd231/chamber/index.html">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script defer src="scripts/footer.js"></script>
+    <script defer src="scripts/home.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/chamber_logo.png" alt="Chamber Logo" width="60" height="60">
+            <span>City Chamber</span>
+        </div>
+        <a id="menu" href="#" aria-label="Toggle Menu"></a>
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-grid">
+        <section class="hero">
+            <picture>
+                <source media="(max-width: 600px)" srcset="images/hero-small.webp">
+                <img src="images/curitiba.png" alt="Vista panorâmica do Jardim Botânico de Curitiba" width="1200" height="600">
+            </picture>
+            <div class="cta-overlay">
+                <h1>Impulsione seu Negócio em Curitiba</h1>
+                <a href="join.html" class="cta-button">Junte-se à Câmara</a>
+            </div>
+        </section>
+
+        <section class="events">
+            <h2>Próximos Eventos</h2>
+            <div id="event-list">
+                <p>Networking de Outono - 25 de Março</p>
+                <p>Workshop: Marketing Digital Local - 02 de Abril</p>
+            </div>
+        </section>
+
+        <section class="weather">
+            <h2>Clima Atual</h2>
+            <div id="weather-info">
+                <p>Carregando dados...</p>
+            </div>
+            <div id="forecast">
+                <h3>Previsão para 3 Dias</h3>
+                <div id="forecast-details"></div>
+            </div>
+        </section>
+
+        <section class="spotlights">
+            <h2>Empresas em Destaque</h2>
+            <div id="business-spotlights">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://github.com" target="_blank"><img src="images/github_logo.webp" alt="GitHub"></a>
+            <a href="https://linkedin.com" target="_blank"><img src="images/linkedin_logo.webp" alt="LinkedIn"></a>
+            <a href="https://instagram.com" target="_blank"><img src="images/instagram_logo.png" alt="Instagram"></a>
+        </div>
+        <p>&copy; <span id="year"></span> Camilla Vieira | Curitiba, Brazil</p>
+        <p>Última Modificação: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
