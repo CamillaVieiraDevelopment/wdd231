@@ -135,8 +135,8 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.6);
+    transform: translate(-50%, -180%);
+    background: rgba(18, 19, 102, 0.4);
     color: white;
     padding: 1rem;
     text-align: center;
