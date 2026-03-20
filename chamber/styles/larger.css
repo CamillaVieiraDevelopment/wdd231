@@ -1,8 +1,7 @@
 /* =========================================
-   DESKTOP STYLES
+   DESKTOP STYLES (Larger than 640px)
 ========================================= */
 @media screen and (min-width: 640px) {
-
     #menu {
         display: none;
     }
@@ -13,55 +12,14 @@
         padding: 1rem 5%;
     }
 
-    .logo-container {
-        margin-bottom: 0;
-    }
-
-    .navigation {
-        display: flex !important;
+    /* Navegação sem !important conforme auditoria */
+    nav .navigation {
+        display: flex;
         flex-direction: row;
         width: auto;
     }
 
-    .navigation li a {
-        border-top: none;
-        padding: 0.5rem 1rem;
-    }
-
-    #members.grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-
-    /* List View adjustments for Desktop */
-    #members.list .card {
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr 1fr;
-        align-items: center;
-        text-align: left;
-    }
-
-@media screen and (min-width: 640px) {
-    .home-grid {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-areas: 
-            "hero hero"
-            "events weather"
-            "spotlights spotlights";
-    }
-    .hero { grid-area: hero; }
-    .events { grid-area: events; }
-    .weather { grid-area: weather; }
-    .spotlights { grid-area: spotlights; }
-    
-    #business-spotlights {
-        display: flex;
-        justify-content: space-around;
-        gap: 1rem;
-    }
-}
-
-@media screen and (min-width: 640px) {
+    /* --- GRID DA HOME PAGE --- */
     .home-grid {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -69,6 +27,8 @@
             "hero hero"
             "events weather"
             "spotlights spotlights";
+        gap: 1.5rem;
+        padding: 20px;
     }
 
     .hero {
@@ -88,13 +48,35 @@
     }
 
     #business-spotlights {
-        display: flex;
-        justify-content: space-around;
-        gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
     }
-}
 
+    /* --- GRID DO DIRECTORY (Restauração dos Cards) --- */
+    #members.grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+    }
 
+    #members.grid .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        background-color: #fff;
+    }
 
-
+    /* Estilo de Lista para o Directory */
+    #members.list .card {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        align-items: center;
+        padding: 0.5rem;
+        border-bottom: 1px solid #ccc;
+    }
 }
