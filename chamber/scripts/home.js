@@ -1,55 +1,47 @@
-// Configurações da API de Clima
-const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=-25.42&lon=-49.27&units=metric&appid=SUA_API_KEY';
-const forecastUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=-25.42&lon=-49.27&units=metric&appid=SUA_API_KEY';
-
-// Lógica de Spotlights de Membros
+// Spotlights Logic of members (Chamber Commerce)
 const membersUrl = "data/members.json";
 
-async function loadHomeData() {
+async function loadSpotlightData() {
     try {
-        // Fetch Clima (Exemplo simplificado)
-        const weatherResponse = await fetch(weatherUrl);
-        const weatherData = await weatherResponse.json();
-        displayWeather(weatherData);
-
-        // Fetch Membros para Spotlight
-        const membersResponse = await fetch(membersUrl);
-        const members = await membersResponse.json();
-        displaySpotlights(members);
+        const response = await fetch(membersUrl);
+        if (response.ok) {
+            const members = await response.json();
+            displaySpotlights(members);
+        } else {
+            throw Error(await response.text());
+        }
     } catch (error) {
-        console.error("Erro ao carregar dados da Home:", error);
+        console.error("Erro ao carregar membros para Spotlight:", error);
     }
 }
 
 function displaySpotlights(members) {
     const spotlightContainer = document.querySelector("#business-spotlights");
-    // Filtra membros Gold (3) ou Silver (2)
+    spotlightContainer.innerHTML = ""; // Clean of container before inserting
+
+    // Filter members Gold (Level 3) or Silver (Level 2)
     const eligibleMembers = members.filter(m => m.membership === 3 || m.membership === 2);
 
-    // Sorteia 3 aleatórios
+    // Prize down and select 2 or 3 members randomly
     const shuffled = eligibleMembers.sort(() => 0.5 - Math.random());
     const selected = shuffled.slice(0, 3);
 
     selected.forEach(member => {
-        const div = document.createElement("div");
-        div.className = "spotlight-card";
-        div.innerHTML = `
+        const card = document.createElement("div");
+        card.className = "spotlight-card";
+
+        // Show nome, logo, number of celphone, adress, website and nível
+        card.innerHTML = `
             <h3>${member.name}</h3>
-            <img src="images/${member.image}" alt="${member.name}" loading="lazy">
-            <p>${member.phone}</p>
-            <p>${member.address}</p>
-            <a href="${member.website}">Website</a>
+            <img src="images/${member.image}" alt="Logo de ${member.name}" loading="lazy" width="150">
+            <p><strong>Fone:</strong> ${member.phone}</p>
+            <p><strong>Endereço:</strong> ${member.address}</p>
+            <p><strong>Nível:</strong> ${member.membership === 3 ? 'Gold' : 'Silver'}</p>
+            <a href="${member.website}" target="_blank">Visitar Website</a>
         `;
-        spotlightContainer.appendChild(div);
+        spotlightContainer.appendChild(card);
     });
 }
 
-function displayWeather(data) {
-    const weatherInfo = document.querySelector("#weather-info");
-    weatherInfo.innerHTML = `
-        <p><strong>${data.main.temp}°C</strong> - ${data.weather[0].description}</p>
-        <p>Umidade: ${data.main.humidity}%</p>
-    `;
-}
-
-loadHomeData();
+// Inicialization the load of spotlights
+loadSpotlightData();

@@ -21,6 +21,7 @@
 
     <script defer src="scripts/footer.js"></script>
     <script defer src="scripts/home.js"></script>
+    <script defer src="scripts/weather.js"></script>
 </head>
 
 <body>
@@ -44,7 +45,8 @@
         <section class="hero">
             <picture>
                 <source media="(max-width: 600px)" srcset="images/hero-small.webp">
-                <img src="images/curitiba.png" alt="Vista panorâmica do Jardim Botânico de Curitiba" width="1200" height="600">
+                <img src="images/curitiba.png" alt="Vista panorâmica do Jardim Botânico de Curitiba" width="1200"
+                    height="600">
             </picture>
             <div class="cta-overlay">
                 <h1>Impulsione seu Negócio em Curitiba</h1>
@@ -63,11 +65,12 @@
         <section class="weather">
             <h2>Clima Atual</h2>
             <div id="weather-info">
-                <p>Carregando dados...</p>
+                <p>Carregando dados do clima...</p>
             </div>
             <div id="forecast">
                 <h3>Previsão para 3 Dias</h3>
-                <div id="forecast-details"></div>
+                <div id="forecast-details">
+                </div>
             </div>
         </section>
 
