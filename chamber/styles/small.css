@@ -163,7 +163,7 @@ main {
     padding: var(--space-sm);
 }
 
-/* Alterado de #members.grid para apenas #members */
+
 #members {
     display: grid;
     grid-template-columns: 1fr;
