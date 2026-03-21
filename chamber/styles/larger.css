@@ -46,27 +46,28 @@
         grid-area: spotlights;
     }
 
-    /* Hero Desktop */
+    /* Hero Desktop Adjustments */
     .cta-overlay {
-        width: 50%;
-        padding: 2rem;
+        width: 45%;
+        padding: 2.5rem;
     }
 
     .cta-overlay h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
 
     /* --- UPCOMING EVENTS STYLING --- */
     .events {
-        background-color: #f9f9f9;
+        background-color: #ffffff;
+        /* Changed from #f9f9f9 as requested */
         padding: 1.5rem;
         border-radius: 8px;
-        border-left: 8px solid #003366;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border-left: 8px solid var(--color-primary);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     #event-list p {
-        font-size: 1.2rem;  
+        font-size: 1.2rem;
         line-height: 1.6;
         margin: 0.5rem 0;
     }
@@ -78,7 +79,7 @@
         border-radius: 8px;
         border: 1px solid #bccfeb;
         text-align: center;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     /* --- BUSINESS SPOTLIGHTS --- */
@@ -91,11 +92,11 @@
 
     .spotlight-card {
         background-color: #fff;
-        padding: 1rem;
+        padding: 1.5rem;
         border-radius: 8px;
         border: 1px solid #ddd;
         text-align: center;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     }
 
     /* --- DIRECTORY GRID --- */
