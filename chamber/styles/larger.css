@@ -12,14 +12,13 @@
         padding: 1rem 5%;
     }
 
-    /* Navigation without !important for audit compliance [cite: 195, 629] */
     nav .navigation {
         display: flex;
         flex-direction: row;
         width: auto;
     }
 
-    /* --- HOME PAGE GRID LAYOUT [cite: 196] --- */
+    /* --- MAIN HOME GRID --- */
     .home-grid {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -29,8 +28,6 @@
             "spotlights spotlights";
         gap: 1.5rem;
         padding: 20px;
-        align-items: start;
-        /* Ensures cards don't stretch unevenly */
     }
 
     .hero {
@@ -49,27 +46,63 @@
         grid-area: spotlights;
     }
 
-    /* Visual refinements for the Weather card in Desktop */
-    .weather {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    /* Hero Desktop */
+    .cta-overlay {
+        width: 50%;
+        padding: 2rem;
     }
 
-    /* --- DIRECTORY GRID [cite: 207] --- */
+    .cta-overlay h1 {
+        font-size: 2.2rem;
+    }
+
+    /* --- UPCOMING EVENTS STYLING --- */
+    .events {
+        background-color: #f9f9f9;
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 8px solid #003366;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    #event-list p {
+        font-size: 1.2rem;  
+        line-height: 1.6;
+        margin: 0.5rem 0;
+    }
+
+    /* --- CURRENT WEATHER STYLING --- */
+    .weather {
+        background-color: #e6f2ff;
+        padding: 1.5rem;
+        border-radius: 8px;
+        border: 1px solid #bccfeb;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* --- BUSINESS SPOTLIGHTS --- */
+    #business-spotlights {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .spotlight-card {
+        background-color: #fff;
+        padding: 1rem;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    /* --- DIRECTORY GRID --- */
     #members.grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 1rem;
         padding: 1rem;
-    }
-
-    #members.grid .card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 1rem;
-        border: 1px solid var(--color-border);
-        r: var(--color-white);
-    
     }
 }

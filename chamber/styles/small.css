@@ -2,17 +2,12 @@
    GLOBAL VARIABLES
 ========================================= */
 :root {
-    /* Fonts */
     --font-primary: 'Roboto', sans-serif;
-
-    /* Colors */
     --color-primary: #003366;
     --color-white: #ffffff;
     --color-border: #bccfeb;
     --color-card-bg: #f9f9f9;
     --color-accent: #0055aa;
-
-    /* Spacing */
     --space-xs: 0.5rem;
     --space-sm: 1rem;
 }
@@ -26,7 +21,7 @@ body {
 }
 
 /* =========================================
-   HEADER
+   HEADER & NAV
 ========================================= */
 header {
     background: var(--color-primary);
@@ -59,7 +54,6 @@ header {
     text-transform: uppercase;
 }
 
-/* --- Hamburger Menu Button --- */
 #menu {
     display: block;
     position: absolute;
@@ -79,15 +73,11 @@ header {
     content: "X";
 }
 
-/* =========================================
-   NAVIGATION
-========================================= */
 .navigation {
     list-style: none;
     padding: 0;
     margin: 0;
     display: none;
-    /* Hidden on mobile */
     flex-direction: column;
     width: 100%;
 }
@@ -110,25 +100,24 @@ header {
     text-decoration: underline;
 }
 
-
 /* =========================================
-    HOME PAGE
+    HOME PAGE - HERO SECTION
 ========================================= */
-
-
 .home-grid {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.hero {
+.hero-container {
     position: relative;
+    width: 100%;
 }
 
-.hero img {
+.hero-img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
 .cta-overlay {
@@ -136,59 +125,38 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -180%);
-    background: rgba(18, 19, 102, 0.4);
+    background: rgba(0, 51, 102, 0.5);
+    /* Azul transparente */
     color: white;
     padding: 1rem;
     text-align: center;
+    width: 80%;
+    border-radius: 5px;
+}
+
+.cta-overlay h1 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    color: white;
 }
 
 .cta-button {
     display: inline-block;
     background: var(--color-accent);
     color: white;
-    padding: 0.8rem 1.5rem;
+    padding: 0.6rem 1.2rem;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 10px;
+    font-weight: bold;
 }
 
-
 /* =========================================
-   DIRECTORY - MAIN CONTENT & BUTTONS 
+   MEMBER CARDS & DIRECTORY
 ========================================= */
 main {
     padding: var(--space-sm);
 }
 
-h1 {
-    text-align: center;
-}
-
-.menu-controls {
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-.menu-controls button {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    padding: 0.7rem 1.2rem;
-    border: none;
-    border-radius: 4px;
-    font-family: var(--font-primary);
-    font-weight: bold;
-    cursor: pointer;
-    margin: 0.2rem;
-    transition: background 0.3s;
-}
-
-.menu-controls button:hover {
-    background-color: var(--color-accent);
-}
-
-/* =========================================
-   MEMBER CARDS
-========================================= */
 #members.grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -207,22 +175,6 @@ h1 {
     max-width: 200px;
     height: auto;
     margin-bottom: 1rem;
-}
-
-/* List View specific for small screens */
-#members.list {
-    display: flex;
-    flex-direction: column;
-}
-
-#members.list .card {
-    display: block;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-#members.list .card img {
-    display: none;
 }
 
 /* =========================================
