@@ -12,14 +12,14 @@
         padding: 1rem 5%;
     }
 
-    /* Navegação sem !important conforme auditoria */
+    /* Navigation without !important for audit compliance [cite: 195, 629] */
     nav .navigation {
         display: flex;
         flex-direction: row;
         width: auto;
     }
 
-    /* --- GRID DA HOME PAGE --- */
+    /* --- HOME PAGE GRID LAYOUT [cite: 196] --- */
     .home-grid {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -29,6 +29,8 @@
             "spotlights spotlights";
         gap: 1.5rem;
         padding: 20px;
+        align-items: start;
+        /* Ensures cards don't stretch unevenly */
     }
 
     .hero {
@@ -47,13 +49,12 @@
         grid-area: spotlights;
     }
 
-    #business-spotlights {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
+    /* Visual refinements for the Weather card in Desktop */
+    .weather {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     }
 
-    /* --- GRID DO DIRECTORY (Restauração dos Cards) --- */
+    /* --- DIRECTORY GRID [cite: 207] --- */
     #members.grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -67,16 +68,8 @@
         align-items: center;
         text-align: center;
         padding: 1rem;
-        border: 1px solid #ddd;
-        background-color: #fff;
-    }
-
-    /* Estilo de Lista para o Directory */
-    #members.list .card {
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr 1fr;
-        align-items: center;
-        padding: 0.5rem;
-        border-bottom: 1px solid #ccc;
+        border: 1px solid var(--color-border);
+        r: var(--color-white);
+    
     }
 }
