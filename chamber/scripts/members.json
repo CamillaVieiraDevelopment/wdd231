@@ -38,9 +38,8 @@
         "website": "https://www.jacomar.com.br",
         "image": "jacomar.jpg",
         "membership": 2
-    },
-    
-       {
+    },    
+    {
         "name": "Cobasi",
         "address": "Av. Pres. Kennedy, 4121 - Portão, Curitiba - PR",
         "phone": "+55 41 3026-1515",
@@ -56,7 +55,6 @@
         "image": "dois_corações.jpg",
         "membership": 1
     },
-
     {
         "name": "Pipefy",
         "address": "Rua Dr. Faivre, 441 - Centro, Curitiba - PR",

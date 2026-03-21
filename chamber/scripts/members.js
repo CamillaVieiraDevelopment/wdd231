@@ -30,7 +30,7 @@ function displayMembers(members) {
     });
 }
 
-// Lógica dos Botões de Layout
+// Buttons Logic for Layout Toggle
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
 
