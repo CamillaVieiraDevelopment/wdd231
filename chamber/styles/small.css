@@ -158,11 +158,13 @@ header {
 /* =========================================
    MEMBER CARDS & DIRECTORY
 ========================================= */
+
 main {
     padding: var(--space-sm);
 }
 
-#members.grid {
+/* Alterado de #members.grid para apenas #members */
+#members {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--space-sm);
@@ -174,14 +176,6 @@ main {
     background: var(--color-card-bg);
     text-align: center;
 }
-
-.card img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    margin-bottom: 1rem;
-}
-
 /* =========================================
    FOOTER
 ========================================= */
