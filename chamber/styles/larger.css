@@ -46,7 +46,7 @@
         grid-area: spotlights;
     }
 
-    /* Hero Desktop Adjustments */
+    /* Hero Desktop*/
     .cta-overlay {
         width: 45%;
         padding: 2.5rem;
@@ -98,11 +98,30 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     }
 
-    /* --- DIRECTORY GRID --- */
-    #members.grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 1rem;
-        padding: 1rem;
-    }
+        /* --- DIRECTORY GRID --- */
+        #members.grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 1.5rem;
+            align-items: stretch;
+        }
+    
+        #members.list {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        #members.list .card {
+            display: flex;
+            align-items: center;
+            justify-content: 埋 flex-start;
+            text-align: left;
+            padding: 0.5rem 1rem;
+            margin-bottom: 0.5rem;
+        }
+    
+        #members.list .card img {
+            display: none;
+        }
 }
