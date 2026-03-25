@@ -197,3 +197,56 @@ footer {
     width: 35px;
     height: 35px;
 }
+
+
+/* Animação para os cards de membresia */
+@keyframes cardEntry {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.membership-card {
+    border: 1px solid var(--color-border);
+    padding: var(--space-sm);
+    margin: 10px 0;
+    background: var(--color-card-bg);
+    text-align: center;
+    /* Aplicação da animação no carregamento inicial [cite: 488] */
+    animation: cardEntry 0.8s ease-out forwards;
+}
+
+/* Estilização do Modal [cite: 282, 350] */
+dialog {
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    border: none;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 51, 102, 0.7);
+    /* Cor primária semi-transparente */
+}
+
+.join-form label {
+    display: block;
+    margin: 1rem 0;
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+}
