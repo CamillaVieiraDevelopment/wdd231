@@ -20,8 +20,12 @@ body {
     margin: 0;
 }
 
+main {
+    padding: var(--space-sm);
+}
+
 /* =========================================
-   HEADER & NAV
+   HEADER & NAV (Consolidado)
 ========================================= */
 header {
     background: var(--color-primary);
@@ -101,7 +105,7 @@ header {
 }
 
 /* =========================================
-    HOME PAGE - HERO SECTION
+    HOME PAGE SECTIONS (Consolidado)
 ========================================= */
 .home-grid {
     display: flex;
@@ -155,31 +159,69 @@ header {
     background: #e6b800;
 }
 
+.events,
+.weather {
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
 /* =========================================
-   MEMBER CARDS & DIRECTORY
+   JOIN PAGE & CARDS (Consolidado)
 ========================================= */
-
-main {
-    padding: var(--space-sm);
-}
-
-
-#members {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-sm);
-}
-
-.card {
+.membership-card {
     border: 1px solid var(--color-border);
     padding: var(--space-sm);
+    margin: 10px 0;
     background: var(--color-card-bg);
     text-align: center;
+    animation: cardEntry 0.8s ease-out forwards;
+    transition: box-shadow 0.3s ease;
 }
+
+.membership-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.membership-cards h3,
+.membership-cards p {
+    color: var(--color-primary);
+}
+
+.join-main {
+    padding-bottom: 3rem;
+}
+
+.join-form label {
+    display: block;
+    margin: 1rem 0;
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+}
+
 /* =========================================
-   FOOTER
+   MODAL & FOOTER
 ========================================= */
-/* Consolidação do Footer no small.css */
+dialog {
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    border: none;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 51, 102, 0.7);
+}
+
 footer {
     background-color: var(--color-primary);
     color: var(--color-white);
@@ -201,8 +243,6 @@ footer {
     height: 35px;
 }
 
-
-/* Animação para os cards de membresia */
 @keyframes cardEntry {
     from {
         opacity: 0;
@@ -214,63 +254,3 @@ footer {
         transform: translateY(0);
     }
 }
-
-/* Correção de Contraste nos Cards  */
-.membership-card {
-    border: 1px solid var(--color-border);
-    padding: var(--space-sm);
-    margin: 10px 0;
-    /* Altere de var(--color-primary) para uma cor clara para permitir leitura do texto preto */
-    background: var(--color-card-bg);
-    text-align: center;
-    animation: cardEntry 0.8s ease-out forwards;
-}
-
-/* Garanta que o texto dentro dos cards seja escuro sobre fundo claro */
-.membership-cards h3,
-.membership-cards p {
-    color: var(--color-primary);
-    /* Agora o azul escuro é o texto, sobre fundo claro */
-}
-
-/* Otimização visual do Logo (A imagem real deve ser comprimida para < 125kb)  */
-.logo-container img {
-    width: 60px;
-    height: 60px;
-    /* O arquivo images/chamber_logo.png precisa ser exportado novamente com menor tamanho */
-}
-/* Estilização do Modal [cite: 282, 350] */
-dialog {
-    width: 90%;
-    max-width: 500px;
-    border-radius: 8px;
-    border: none;
-    padding: 2rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-dialog::backdrop {
-    background-color: rgba(0, 51, 102, 0.7);
-    /* Cor primária semi-transparente */
-}
-
-.join-form label {
-    display: block;
-    margin: 1rem 0;
-}
-
-.join-form input,
-.join-form select,
-.join-form textarea {
-    display: block;
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 0.3rem;
-}
-
-/* Adicione isso ao seu arquivo CSS para dar respiro ao rodapé */
-.join-main {
-    padding-bottom: 3rem;
-    /* Cria um espaço entre o último card/form e o rodapé */
-}
-
