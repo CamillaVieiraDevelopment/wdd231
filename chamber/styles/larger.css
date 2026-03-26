@@ -124,4 +124,98 @@
     #members.list .card img {
         display: none;
     }
+
+/* larger.css - Adicionar ao final do arquivo */
+
+@media screen and (min-width: 640px) {
+
+    /* --- LAYOUT EM DUAS COLUNAS --- */
+    .join-content-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* Duas colunas iguais */
+        gap: 3rem;
+        /* Espaço maior entre as colunas */
+        align-items: start;
+        /* Alinha o topo */
+        margin-top: 2rem;
+    }
+
+    /* Garante que o título ocupe toda a largura */
+    .join-main h1 {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    /* Reposiciona os cartões na esquerda e o form na direita */
+    .membership-cards {
+        grid-column: 1;
+    }
+
+    .join-form {
+        grid-column: 2;
+    }
+
+    /* --- ESTILIZAÇÃO DO FORMULÁRIO (Fieldsets) --- */
+    .join-form fieldset {
+        border: 1px solid var(--color-border, #bccfeb);
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .join-form legend {
+        padding: 0 10px;
+        font-weight: bold;
+        color: var(--color-primary, #003366);
+        font-size: 1.1rem;
+    }
+
+    /* --- IMAGENS DAS MOEDAS --- */
+    .coin-container {
+        width: 80px;
+        /* Ajuste o tamanho conforme suas imagens */
+        height: 80px;
+        margin: 0 auto 1rem;
+        /* Centraliza e dá espaço abaixo */
+        /* background-color: #eee; /* Temporário, para visualização */
+        /* border-radius: 50%; /* Temporário, para visualização */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .coin-img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    /* --- ANIMAÇÃO DAS MOEDAS --- */
+    /* Definição da animação: entra girando e caindo */
+    @keyframes coinDrop {
+        0% {
+            opacity: 0;
+            transform: translateY(-50px) rotateY(-180deg);
+        }
+
+        60% {
+            transform: translateY(10px) rotateY(30deg);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0) rotateY(0deg);
+        }
+    }
+
+    /* Aplica a animação ao contêiner da moeda quando a página carregar */
+    .membership-card .coin-container {
+        animation: coinDrop 1.2s ease-out forwards;
+        /* forwards mantém o estado final da animação */
+    }
+}
+
 }
