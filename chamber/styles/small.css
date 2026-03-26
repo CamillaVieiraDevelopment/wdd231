@@ -212,23 +212,30 @@ footer {
     }
 }
 
+/* Correção de Contraste nos Cards  */
 .membership-card {
     border: 1px solid var(--color-border);
     padding: var(--space-sm);
     margin: 10px 0;
-    background: var(--color-primary);
+    /* Altere de var(--color-primary) para uma cor clara para permitir leitura do texto preto */
+    background: var(--color-card-bg);
     text-align: center;
-    
-    /* Aplicação da animação no carregamento inicial [cite: 488] */
     animation: cardEntry 0.8s ease-out forwards;
 }
 
+/* Garanta que o texto dentro dos cards seja escuro sobre fundo claro */
 .membership-cards h3,
 .membership-cards p {
-    color: var(--color-white);
-    /* Um cinza escuro para o texto de apoio, menos cansativo que o preto puro */
+    color: var(--color-primary);
+    /* Agora o azul escuro é o texto, sobre fundo claro */
 }
 
+/* Otimização visual do Logo (A imagem real deve ser comprimida para < 125kb)  */
+.logo-container img {
+    width: 60px;
+    height: 60px;
+    /* O arquivo images/chamber_logo.png precisa ser exportado novamente com menor tamanho */
+}
 /* Estilização do Modal [cite: 282, 350] */
 dialog {
     width: 90%;
