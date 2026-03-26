@@ -1,5 +1,5 @@
 /* =========================================
-   GLOBAL VARIABLES
+   GLOBAL VARIABLES & BASE
 ========================================= */
 :root {
     --font-primary: 'Roboto', sans-serif;
@@ -12,9 +12,6 @@
     --space-sm: 1rem;
 }
 
-/* =========================================
-   BASE STYLES
-========================================= */
 body {
     font-family: var(--font-primary);
     margin: 0;
@@ -25,7 +22,7 @@ main {
 }
 
 /* =========================================
-   HEADER & NAV (Consolidado)
+   HEADER & NAV
 ========================================= */
 header {
     background: var(--color-primary);
@@ -105,7 +102,7 @@ header {
 }
 
 /* =========================================
-    HOME PAGE SECTIONS (Consolidado)
+    HOME PAGE SECTIONS
 ========================================= */
 .home-grid {
     display: flex;
@@ -167,7 +164,7 @@ header {
 }
 
 /* =========================================
-   JOIN PAGE & CARDS (Consolidado)
+   JOIN PAGE & CARDS
 ========================================= */
 .membership-card {
     border: 1px solid var(--color-border);
