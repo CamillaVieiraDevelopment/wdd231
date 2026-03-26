@@ -179,11 +179,14 @@ main {
 /* =========================================
    FOOTER
 ========================================= */
+/* Consolidação do Footer no small.css */
 footer {
     background-color: var(--color-primary);
     color: var(--color-white);
     text-align: center;
     padding: 2rem 1rem;
+    clear: both;
+    width: 100%;
 }
 
 .social {
@@ -271,8 +274,3 @@ dialog::backdrop {
     /* Cria um espaço entre o último card/form e o rodapé */
 }
 
-footer {
-    clear: both;
-    /* Garante que o rodapé fique abaixo de qualquer elemento flutuante */
-    width: 100%;
-}
