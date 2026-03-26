@@ -45,46 +45,47 @@
 
     <main class="join-main">
         <h1>Chamber Membership Application</h1>
-    
-        < class="join-content-wrapper">
-    
+
+        <div class="join-content-wrapper">
+
             <form method="get" action="thankyou.html" class="join-form">
-    
+
                 <fieldset>
                     <legend>Personal Information</legend>
                     <label>First Name:
                         <input type="text" name="fname" required autocomplete="given-name" title="Your first name">
                     </label>
-    
+
                     <label>Last Name:
                         <input type="text" name="lname" required autocomplete="family-name" title="Your last name">
                     </label>
-    
+
                     <label>Organizational Title:
                         <input type="text" name="title" autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}"
                             title="Minimum 7 characters (letters, spaces, hyphens only)">
                     </label>
-    
+
                     <label>Email Address:
                         <input type="email" name="email" required autocomplete="email" placeholder="example@domain.com"
                             title="A valid email address">
                     </label>
-    
+
                     <label>Mobile Phone:
                         <input type="tel" name="phone" required autocomplete="tel" title="Your mobile number">
                     </label>
                 </fieldset>
-    
+
                 <fieldset>
                     <legend>Company Details</legend>
                     <label>Business Name:
-                        <input type="text" name="business" required autocomplete="organization" title="Your company name">
+                        <input type="text" name="business" required autocomplete="organization"
+                            title="Your company name">
                     </label>
                     <label>Business Description:
                         <textarea name="description" title="Tell us about your business" rows="4"></textarea>
                     </label>
                 </fieldset>
-    
+
                 <fieldset>
                     <legend>Membership Selection</legend>
                     <label>Membership Level:
@@ -97,15 +98,15 @@
                         </select>
                     </label>
                 </fieldset>
-    
+
                 <input type="hidden" id="timestamp" name="timestamp">
                 <button type="submit" class="submit-btn">Apply Now</button>
             </form>
-    
+
             <section class="membership-cards">
                 <h2>Membership Levels & Benefits</h2>
                 <p>Click "Learn More" to see specific benefits for each level.</p>
-    
+
                 <div class="membership-card" id="card-np">
                     <div class="coin-container">
                         <img src="images/no_profit.png" alt="Non-Profit Symbol" class="coin-img">
@@ -121,8 +122,7 @@
                     <h3>Gold</h3>
                     <button class="open-modal" data-level="gold">Learn More</button>
                 </div>
-                
-    
+
                 <div class="membership-card" id="card-silver">
                     <div class="coin-container">
                         <img src="images/silver.png" alt="Silver Coin" class="coin-img">
@@ -130,7 +130,7 @@
                     <h3>Silver</h3>
                     <button class="open-modal" data-level="silver">Learn More</button>
                 </div>
-    
+
                 <div class="membership-card" id="card-bronze">
                     <div class="coin-container">
                         <img src="images/bronze.png" alt="Bronze Coin" class="coin-img">
@@ -138,16 +138,17 @@
                     <h3>Bronze</h3>
                     <button class="open-modal" data-level="bronze">Learn More</button>
                 </div>
-                </section>
-                <dialog id="membership-modal">
-                    <div id="modal-content"></div>
-                    <button id="close-modal">Close</button>
-                </dialog>
-                </main>
-                
-<footer>
-    <p>&copy; <span id="year"></span> Camilla Vieira | Curitiba, Brazil</p>
-</footer>
+            </section>
+        </div>
+        <dialog id="membership-modal">
+            <div id="modal-content"></div>
+            <button id="close-modal">Close</button>
+        </dialog>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Camilla Vieira | Curitiba, Brazil</p>
+    </footer>
 </body>
 
 </html>
