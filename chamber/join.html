@@ -33,38 +33,6 @@
         <h1>Chamber Membership Application</h1>
     
         <div class="join-content-wrapper">
-            <section class="membership-cards">
-                <h2>Membership Levels & Benefits</h2>
-                <p>Click "Learn More" to see specific benefits for each level.</p>
-    
-                <div class="membership-card" id="card-np">
-                    <div class="coin-container">
-                    </div>
-                    <h3>Non-Profit</h3>
-                    <button class="open-modal" data-level="np">Learn More</button>
-                </div>
-    
-                <div class="membership-card" id="card-bronze">
-                    <div class="coin-container">
-                    </div>
-                    <h3>Bronze</h3>
-                    <button class="open-modal" data-level="bronze">Learn More</button>
-                </div>
-    
-                <div class="membership-card" id="card-silver">
-                    <div class="coin-container">
-                    </div>
-                    <h3>Silver</h3>
-                    <button class="open-modal" data-level="silver">Learn More</button>
-                </div>
-    
-                <div class="membership-card" id="card-gold">
-                    <div class="coin-container">
-                    </div>
-                    <h3>Gold</h3>
-                    <button class="open-modal" data-level="gold">Learn More</button>
-                </div>
-            </section>
     
             <form method="get" action="thankyou.html" class="join-form">
     
@@ -119,13 +87,42 @@
                 <input type="hidden" id="timestamp" name="timestamp">
                 <input type="submit" value="Apply Now" class="submit-btn">
             </form>
-        </div>
-        <dialog id="membership-modal">
-            <div id="modal-content"></div>
-            <button id="close-modal">Close</button>
-        </dialog>
-    </main>
+    
+            <section class="membership-cards">
+                <h2>Membership Levels & Benefits</h2>
+                <p>Click "Learn More" to see specific benefits for each level.</p>
+    
+                <div class="membership-card" id="card-np">
+                    <div class="coin-container">
+                        <img src="images/no_profit.png" alt="Non-Profit Symbol" class="coin-img">
+                    </div>
+                    <h3>Non-Profit</h3>
+                    <button class="open-modal" data-level="np">Learn More</button>
+                </div>
 
+                <div class="membership-card" id="card-gold">
+                    <div class="coin-container">
+                        <img src="images/gold.png" alt="Gold Coin" class="coin-img">
+                    </div>
+                    <h3>Gold</h3>
+                    <button class="open-modal" data-level="gold">Learn More</button>
+                </div>
+                
+    
+                <div class="membership-card" id="card-silver">
+                    <div class="coin-container">
+                        <img src="images/silver.png" alt="Silver Coin" class="coin-img">
+                    </div>
+                    <h3>Silver</h3>
+                    <button class="open-modal" data-level="silver">Learn More</button>
+                </div>
+    
+                <div class="membership-card" id="card-bronze">
+                    <div class="coin-container">
+                        <img src="images/bronze.png" alt="Bronze Coin" class="coin-img">
+                    </div>
+                    <h3>Bronze</h3>
+                    <button class="open-modal" data-level="bronze">Learn More</button>
     <footer>
         <p>&copy; <span id="year"></span> Camilla Vieira | Curitiba, Brazil</p>
     </footer>

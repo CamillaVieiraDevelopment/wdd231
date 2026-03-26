@@ -216,10 +216,17 @@ footer {
     border: 1px solid var(--color-border);
     padding: var(--space-sm);
     margin: 10px 0;
-    background: var(--color-card-bg);
+    background: var(--color-primary);
     text-align: center;
+    
     /* Aplicação da animação no carregamento inicial [cite: 488] */
     animation: cardEntry 0.8s ease-out forwards;
+}
+
+.membership-cards h3,
+.membership-cards p {
+    color: var(--color-white);
+    /* Um cinza escuro para o texto de apoio, menos cansativo que o preto puro */
 }
 
 /* Estilização do Modal [cite: 282, 350] */

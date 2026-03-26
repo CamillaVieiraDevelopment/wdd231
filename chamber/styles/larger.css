@@ -95,7 +95,7 @@
         border-radius: 8px;
         border: 1px solid #ddd;
         text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 8px var(--color-primary);
     }
 
     /* --- DIRECTORY GRID --- */
@@ -125,15 +125,15 @@
         display: none;
     }
 
-/* larger.css - Adicionar ao final do arquivo */
+/* larger.css - Conteúdo CORRIGIDO (Adicionar ao final do arquivo) */
 
 @media screen and (min-width: 640px) {
 
-    /* --- LAYOUT EM DUAS COLUNAS --- */
+    /* --- LAYOUT EM DUAS COLUNAS (Form à Esquerda) --- */
     .join-content-wrapper {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        /* Duas colunas iguais */
+        /* Define duas colunas. O form (coluna 1) pode ser um pouco maior se necessário */
+        grid-template-columns: 1.2fr 1fr;
         gap: 3rem;
         /* Espaço maior entre as colunas */
         align-items: start;
@@ -148,12 +148,13 @@
         margin-bottom: 2rem;
     }
 
-    /* Reposiciona os cartões na esquerda e o form na direita */
-    .membership-cards {
+    /* POSICIONAMENTO CORRIGIDO: Form na Esquerda (Coluna 1) */
+    .join-form {
         grid-column: 1;
     }
 
-    .join-form {
+    /* POSICIONAMENTO CORRIGIDO: Cartões na Direita (Coluna 2) */
+    .membership-cards {
         grid-column: 2;
     }
 
@@ -175,26 +176,27 @@
 
     /* --- IMAGENS DAS MOEDAS --- */
     .coin-container {
-        width: 80px;
-        /* Ajuste o tamanho conforme suas imagens */
-        height: 80px;
+        width: 100px;
+        /* Tamanho do espaço para a moeda */
+        height: 100px;
         margin: 0 auto 1rem;
         /* Centraliza e dá espaço abaixo */
-        /* background-color: #eee; /* Temporário, para visualização */
-        /* border-radius: 50%; /* Temporário, para visualização */
         display: flex;
         align-items: center;
         justify-content: center;
+        /* Opcional: borda temporária para visualização */
+        /* border: 2px dashed #ccc; 
+           border-radius: 50%; */
     }
 
     .coin-img {
         max-width: 100%;
         max-height: 100%;
         object-fit: contain;
+        /* Garante que a imagem caiba sem distorcer */
     }
 
     /* --- ANIMAÇÃO DAS MOEDAS --- */
-    /* Definição da animação: entra girando e caindo */
     @keyframes coinDrop {
         0% {
             opacity: 0;
@@ -216,6 +218,4 @@
         animation: coinDrop 1.2s ease-out forwards;
         /* forwards mantém o estado final da animação */
     }
-}
-
 }
