@@ -1,4 +1,4 @@
-// Capturar parâmetros da URL [cite: 41, 493]
+// Capture URL parameters
 const urlParams = new URLSearchParams(window.location.search);
 const resultsContainer = document.querySelector("#results");
 
