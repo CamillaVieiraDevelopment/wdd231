@@ -81,7 +81,6 @@
         margin-top: 1rem;
     }
 
-    /* Estilo compartilhado entre Spotlight e Directory Card */
     .spotlight-card,
     #members.grid .card {
         background-color: #fff;
@@ -111,7 +110,6 @@
     #members.list .card {
         display: flex;
         flex-direction: row;
-        /* Alinha itens em linha na lista */
         align-items: center;
         justify-content: flex-start;
         text-align: left;
