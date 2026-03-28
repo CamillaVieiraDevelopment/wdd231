@@ -164,6 +164,39 @@ header {
 }
 
 /* =========================================
+   CARDS PADRONIZADOS (SPOTLIGHT & DIRECTORY)
+========================================= */
+.spotlight-card,
+#members.grid .card {
+    background-color: var(--color-white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    text-align: center;
+    box-shadow: 0 4px 8px var(--color-primary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#members.grid .card img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo para a visualização em lista no mobile */
+#members.list .card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-border);
+    text-align: left;
+}
+
+/* =========================================
    JOIN PAGE & CARDS
 ========================================= */
 .membership-card {
