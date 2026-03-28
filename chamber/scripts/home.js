@@ -1,5 +1,31 @@
+/* --- GLOBAL VARIABLES --- */
 const membersUrl = "data/members.json";
 
+/* --- NAVIGATION & WAYFINDING --- */
+const menuButton = document.querySelector('#menu');
+const navigation = document.querySelector('.navigation');
+const navLinks = document.querySelectorAll('.navigation a');
+
+// Toggle mobile menu
+if (menuButton) {
+    menuButton.addEventListener('click', () => {
+        navigation.classList.toggle('show');
+        menuButton.classList.toggle('show');
+    });
+}
+
+// Active link highlighting (Wayfinding)
+const currentHref = window.location.pathname.split("/").pop() || "index.html";
+
+navLinks.forEach(link => {
+    if (link.getAttribute('href') === currentHref) {
+        link.classList.add('active');
+    } else {
+        link.classList.remove('active');
+    }
+});
+
+/* --- BUSINESS SPOTLIGHTS --- */
 async function loadSpotlights() {
     try {
         const response = await fetch(membersUrl);
@@ -8,25 +34,26 @@ async function loadSpotlights() {
             displaySpotlights(members);
         }
     } catch (error) {
-        console.error("Erro ao carregar spotlights:", error);
+        console.error("Error loading spotlights:", error);
     }
 }
 
 function displaySpotlights(members) {
     const container = document.querySelector("#business-spotlights");
-    // Filtra apenas membros Silver (2) e Gold (3)
+    if (!container) return;
+
+    // Filter Silver (2) and Gold (3) members
     const eligible = members.filter(m => m.membership === 2 || m.membership === 3);
 
-    // Embaralha e pega 3
-    const shuffled = eligible.sort(() => 0.5 - Math.random());
-    const selected = shuffled.slice(0, 3);
+    // Shuffle and pick 3
+    const selected = eligible.sort(() => 0.5 - Math.random()).slice(0, 3);
 
     selected.forEach(member => {
         const section = document.createElement("section");
         section.className = "spotlight-card";
         section.innerHTML = `
             <h3>${member.name}</h3>
-            <img src="images/${member.image}" alt="Logo de ${member.name}" loading="lazy" width="150">
+            <img src="images/${member.image}" alt="Logo of ${member.name}" loading="lazy" width="150">
             <p>${member.phone}</p>
             <p>${member.address}</p>
             <a href="${member.website}" target="_blank">Website</a>
@@ -36,4 +63,5 @@ function displaySpotlights(members) {
     });
 }
 
+/* --- INITIALIZATION --- */
 loadSpotlights();
