@@ -1,12 +1,11 @@
 /* =========================================
    DESKTOP STYLES (Larger than 640px)
 ========================================= */
+
 @media screen and (min-width: 640px) {
-    #menu {
-        display: none;
-    }
 
     header {
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding: 1rem 5%;
@@ -36,10 +35,21 @@
 
     .events {
         grid-area: events;
+        background-color: #ffffff;
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 8px solid var(--color-primary);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .weather {
         grid-area: weather;
+        background-color: #e6f2ff;
+        padding: 1.5rem;
+        border-radius: 8px;
+        border: 1px solid #bccfeb;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .spotlights {
@@ -56,29 +66,10 @@
         font-size: 2.5rem;
     }
 
-    /* --- UPCOMING EVENTS STYLING --- */
-    .events {
-        background-color: #ffffff;
-        padding: 1.5rem;
-        border-radius: 8px;
-        border-left: 8px solid var(--color-primary);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
     #event-list p {
         font-size: 1.2rem;
         line-height: 1.6;
         margin: 0.5rem 0;
-    }
-
-    /* --- CURRENT WEATHER STYLING --- */
-    .weather {
-        background-color: #e6f2ff;
-        padding: 1.5rem;
-        border-radius: 8px;
-        border: 1px solid #bccfeb;
-        text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     /* --- BUSINESS SPOTLIGHTS --- */
@@ -106,12 +97,12 @@
         padding: 1.5rem;
         align-items: stretch;
     }
-    
+
     #members.list {
         display: flex;
         flex-direction: column;
     }
-    
+
     #members.list .card {
         display: flex;
         align-items: center;
@@ -120,45 +111,35 @@
         padding: 0.5rem 1rem;
         margin-bottom: 0.5rem;
     }
-    
+
     #members.list .card img {
         display: none;
     }
 
-/* larger.css - Conteúdo CORRIGIDO (Adicionar ao final do arquivo) */
-
-@media screen and (min-width: 640px) {
-
-    /* --- LAYOUT EM DUAS COLUNAS (Form à Esquerda) --- */
+    /* --- LAYOUT TWO COLUMNS --- */
     .join-content-wrapper {
         display: grid;
-        /* Define duas colunas. O form (coluna 1) pode ser um pouco maior se necessário */
         grid-template-columns: 1.2fr 1fr;
         gap: 3rem;
-        /* Espaço maior entre as colunas */
         align-items: start;
-        /* Alinha o topo */
         margin-top: 2rem;
     }
 
-    /* Garante que o título ocupe toda a largura */
     .join-main h1 {
         grid-column: 1 / -1;
         text-align: center;
         margin-bottom: 2rem;
     }
 
-    /* POSICIONAMENTO CORRIGIDO: Form na Esquerda (Coluna 1) */
     .join-form {
         grid-column: 1;
     }
 
-    /* POSICIONAMENTO CORRIGIDO: Cartões na Direita (Coluna 2) */
     .membership-cards {
         grid-column: 2;
     }
 
-    /* --- ESTILIZAÇÃO DO FORMULÁRIO (Fieldsets) --- */
+    /* --- FORM --- */
     .join-form fieldset {
         border: 1px solid var(--color-border, #bccfeb);
         border-radius: 8px;
@@ -174,29 +155,23 @@
         font-size: 1.1rem;
     }
 
-    /* --- IMAGENS DAS MOEDAS --- */
+    /* --- COINS IMAGES --- */
     .coin-container {
         width: 100px;
-        /* Tamanho do espaço para a moeda */
         height: 100px;
         margin: 0 auto 1rem;
-        /* Centraliza e dá espaço abaixo */
         display: flex;
         align-items: center;
         justify-content: center;
-        /* Opcional: borda temporária para visualização */
-        /* border: 2px dashed #ccc; 
-           border-radius: 50%; */
     }
 
     .coin-img {
         max-width: 100%;
         max-height: 100%;
         object-fit: contain;
-        /* Garante que a imagem caiba sem distorcer */
     }
 
-    /* --- ANIMAÇÃO DAS MOEDAS --- */
+    /* --- ANIMATION OF COINS --- */
     @keyframes coinDrop {
         0% {
             opacity: 0;
@@ -213,10 +188,8 @@
         }
     }
 
-    /* Aplica a animação ao contêiner da moeda quando a página carregar */
     .membership-card .coin-container {
         animation: coinDrop 1.2s ease-out forwards;
-        /* forwards mantém o estado final da animação */
     }
 }
-}
+
