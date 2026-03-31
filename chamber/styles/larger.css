@@ -249,6 +249,43 @@
     }
 }
 
+/* --- Discover Page Desktop Adjustments --- */
+@media (min-width: 1025px) {
+    #discover-grid {
+        grid-template-columns: 300px 1fr;
+        grid-template-areas: "sidebar gallery";
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* Duas colunas como no Directory [cite: 38] */
+        gap: 1.5rem;
+    }
+
+    /* Efeito visual nas imagens apenas no Desktop [cite: 54, 55] */
+    .place-card img {
+        transition: transform 0.3s ease, filter 0.3s ease;
+        filter: saturate(0.8);
+    }
+
+    .place-card img:hover {
+        transform: scale(1.02);
+        filter: saturate(1.2);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Ajuste para alinhar o card horizontalmente no desktop (opcional) */
+    .place-card {
+        text-align: left;
+    }
+
+    .place-card button {
+        margin: 0;
+    }
+}
 
 
 }
