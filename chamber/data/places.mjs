@@ -3,7 +3,7 @@ export const places = [
         "name": "Curitiba Botanical Garden",
         "address": "R. Engo. Ostoja Roguski, s/n - Jardim Botânico",
         "description": "Famous for its iron and glass greenhouse inspired by London's Crystal Palace, it is the city's most iconic landmark.",
-        "photo_url": "images/botanic_garden.jpg"
+        "photo_url": "images/botanic_garden.webp"
     },
     {
         "name": "Wire Opera House",
@@ -15,13 +15,13 @@ export const places = [
         "name": "Oscar Niemeyer Museum (MON)",
         "address": "R. Mal. Hermes, 999 - Centro Cívico",
         "description": "Known as the 'Eye Museum,' it features a collection focused on visual arts, design, and architecture.",
-        "photo_url": "images/mon.png"
+        "photo_url": "images/mon.webp"
     },
     {
         "name": "Tanguá Park",
         "address": "Rua Oswaldo Maciel, 97 - Taboão",
         "description": "One of the city's most beautiful parks, built on old quarries, offering a spectacular sunset.",
-        "photo_url": "images/tangua_park.jpg"
+        "photo_url": "images/tangua_park.webp"
     },
     {
         "name": "Ukrainian Memorial",
@@ -33,7 +33,7 @@ export const places = [
         "name": "Panoramic Tower",
         "address": "R. Prof. Lycio Grein de Castro Vellozo, 191 - Mercês",
         "description": "Offers a 360-degree view of the city from over 100 meters high.",
-        "photo_url": "images/panoramic_tower.jfif"
+        "photo_url": "images/panoramic_tower.webp"
     },
     {
         "name": "Curitiba Municipal Market",
