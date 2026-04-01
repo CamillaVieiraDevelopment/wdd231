@@ -10,6 +10,7 @@
     --color-accent: #0055aa;
     --space-xs: 0.5rem;
     --space-sm: 1rem;
+    --text-color: #333333;
 }
 
 body {
@@ -19,6 +20,12 @@ body {
 
 main {
     padding: var(--space-sm);
+}
+
+.page-title {
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
 }
 
 /* =========================================
@@ -102,156 +109,111 @@ header {
 }
 
 /* =========================================
-    HOME PAGE SECTIONS
+   DISCOVER PAGE & CARDS (MOBILE)
 ========================================= */
-.home-grid {
+#discover-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "sidebar"
+        "gallery";
+    gap: 1.5rem;
+    padding-top: 1rem;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.gallery {
+    grid-area: gallery;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.hero-container {
-    position: relative;
-    width: 100%;
-}
-
-.hero-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.cta-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 40, 80, 0.85);
-    color: var(--color-white);
-    padding: 1.5rem;
-    text-align: center;
-    width: 80%;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.cta-overlay h1 {
-    margin: 0 0 10px 0;
-    font-size: 1.4rem;
-    color: var(--color-white);
-}
-
-.cta-button {
-    display: inline-block;
-    background: #ffcc00;
-    color: #000;
-    padding: 0.8rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.cta-button:hover {
-    background: #e6b800;
-}
-
-.events,
-.weather {
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-}
-
-/* =========================================
-   CARDS PADRONIZADOS (SPOTLIGHT & DIRECTORY)
-========================================= */
-.spotlight-card,
-#members.grid .card {
+.place-card {
+    display: grid;
+    grid-template-areas:
+        "name"
+        "photograph"
+        "description"
+        "loction";
     background-color: var(--color-white);
     padding: 1.5rem;
     border-radius: 8px;
     border: 1px solid var(--color-border);
     text-align: center;
-    box-shadow: 0 4px 8px var(--color-primary);
-    margin-bottom: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 51, 102, 0.1);
+    overflow: hidden;
 }
 
-#members.grid .card img {
-    max-width: 150px;
-    height: auto;
-    margin-bottom: 0.5rem;
-}
-
-/* Estilo para a visualização em lista no mobile */
-#members.list .card {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    border-bottom: 1px solid var(--color-border);
-    text-align: left;
-}
-
-/* =========================================
-   JOIN PAGE & CARDS
-========================================= */
-.membership-card {
-    border: 1px solid var(--color-border);
-    padding: var(--space-sm);
-    margin: 10px 0;
-    background: var(--color-card-bg);
-    text-align: center;
-    animation: cardEntry 0.8s ease-out forwards;
-    transition: box-shadow 0.3s ease;
-}
-
-.membership-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.membership-cards h3,
-.membership-cards p {
+.place-card h2 {
+    grid-area: name;
+    margin: 0.5rem 0 1rem 0;
+    font-size: 1.4rem;
     color: var(--color-primary);
 }
 
-.join-main {
-    padding-bottom: 3rem;
+.place-card figure {
+    grid-area: photograph;
+    margin: 0;
 }
 
-.join-form label {
-    display: block;
-    margin: 1rem 0;
-}
-
-.join-form input,
-.join-form select,
-.join-form textarea {
-    display: block;
+.place-card img {
+    grid-area: photograph;
     width: 100%;
-    padding: 0.5rem;
-    margin-top: 0.3rem;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.place-card p {
+    grid-area: description;
+    margin: 0.5rem 0 1rem 0;
+    line-height: 1.6;
+}
+
+.place-card address {
+    grid-area: loction;
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.place-card button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.place-card button:hover {
+    background-color: var(--color-accent);
+}
+
+#visitor-message {
+    background-color: var(--color-card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-primary);
 }
 
 /* =========================================
-   MODAL & FOOTER
+   FOOTER
 ========================================= */
-dialog {
-    width: 90%;
-    max-width: 500px;
-    border-radius: 8px;
-    border: none;
-    padding: 2rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-dialog::backdrop {
-    background-color: rgba(0, 51, 102, 0.7);
-}
-
 footer {
     background-color: var(--color-primary);
     color: var(--color-white);
@@ -271,128 +233,4 @@ footer {
 .social img {
     width: 35px;
     height: 35px;
-}
-
-@keyframes cardEntry {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/* =========================================
-   DISCOVER PAGE & CARDS (MOBILE)
-========================================= */
-#discover-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "sidebar"
-        "gallery";
-    gap: 1.5rem;
-    /* Mantendo o padrão de espaçamento */
-    padding: var(--space-sm);
-}
-
-.sidebar {
-    grid-area: sidebar;
-}
-
-.gallery {
-    grid-area: gallery;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-/* Formatação dos Cards Padronizada [cite: 36] */
-.place-card {
-    display: grid;
-    grid-template-areas:
-        "name"
-        "photograph"
-        "description"
-        "loction";
-    /* "loction" proposital conforme imagem (18).jpg */
-    background-color: var(--color-white);
-    /* */
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid var(--color-border);
-    /* */
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 51, 102, 0.1);
-    /* Sombra suave padrão */
-    overflow: hidden;
-}
-
-.place-card h2 {
-    grid-area: name;
-    margin: 0 0 10px 0;
-    font-size: 1.4rem;
-    color: var(--color-primary);
-    /* */
-}
-
-.place-card figure {
-    grid-area: photograph;
-    margin: 0;
-}
-
-.place-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    display: block;
-}
-
-.place-card p {
-    grid-area: description;
-    margin: 1rem 0;
-    line-height: 1.4;
-}
-
-.place-card address {
-    grid-area: loction;
-    font-style: normal;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: var(--text-color);
-}
-
-.place-card button {
-    background-color: var(--color-primary);
-    /* */
-    color: var(--color-white);
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
-    width: fit-content;
-    margin: 0 auto;
-}
-
-.place-card button:hover {
-    background-color: var(--color-accent);
-    /* */
-}
-
-/* Mensagem de Visita Estilizada como Card [cite: 42, 43, 44] */
-#visitor-message {
-    background-color: var(--color-card-bg);
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid var(--color-border);
-    margin-bottom: 1rem;
-    text-align: center;
-    font-weight: bold;
-    color: var(--color-primary);
 }
