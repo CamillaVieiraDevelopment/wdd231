@@ -65,12 +65,12 @@ header {
 #menu {
     display: block;
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 1.5rem;
+    right: 1.5rem;
     font-size: 2.5rem;
     text-decoration: none;
     color: var(--color-white);
-    line-height: 1;
+    z-index: 100;
 }
 
 #menu::before {
@@ -80,6 +80,14 @@ header {
 #menu.show::before {
     content: "X";
 }
+
+/* Reset para garantir que as imagens da galeria não quebrem o layout mobile */
+.place-card img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;}
 
 .navigation {
     list-style: none;
@@ -107,6 +115,13 @@ header {
     background-color: rgba(0, 0, 0, 0.2);
     text-decoration: underline;
 }
+
+.navigation li a:hover {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    transition: 0.3s ease;
+}
+
 
 /* =========================================
    DISCOVER PAGE & CARDS (MOBILE LAYOUT)
