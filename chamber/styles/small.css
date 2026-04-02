@@ -4,17 +4,13 @@
 :root {
     --font-primary: 'Roboto', sans-serif;
     --color-primary: #003366;
-    /* Azul Escuro */
     --color-accent: #0055aa;
-    /* Azul Destaque */
     --color-white: #ffffff;
     --color-black: #000000;
     --color-bg-light: #e6f2ff;
-    /* Substitui o rgb/hex manual do weather */
     --color-card-bg: #f9f9f9;
     --color-border: #bccfeb;
     --color-overlay: rgba(0, 51, 102, 0.8);
-    /* Cor para o Hero */
 }
 
 body {
@@ -84,7 +80,6 @@ header {
     content: "X";
 }
 
-/* Reset para garantir que as imagens da galeria não quebrem o layout mobile */
 .place-card img {
     width: 100%;
     max-width: 400px;
@@ -152,7 +147,6 @@ header {
 
 .place-card {
     display: grid;
-    /* Requisito: Named Grid Areas para layout Mobile */
     grid-template-areas:
         "name"
         "photograph"
