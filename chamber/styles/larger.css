@@ -98,58 +98,308 @@
         gap: 1.5rem;
     }
 
-    /* 4. DISCOVER PAGE [cite: 51, 69] */
+    /* 4. DISCOVER PAGE - Layout com Áreas Nomeadas  */
     #discover-grid {
         display: grid;
         grid-template-columns: 300px 1fr;
+        grid-template-areas: "sidebar gallery"; /* Nomeação obrigatória [cite: 37] */
         max-width: 1200px;
         margin: 0 auto;
         gap: 2rem;
     }
 
+    .sidebar {
+        grid-area: sidebar;
+    }
+
     .gallery {
+        grid-area: gallery;
         display: flex;
         flex-direction: column;
         gap: 2rem;
     }
 
-    /* Consolidação da regra .place-card para evitar erro de repetição [cite: 19, 69] */
+    /* Card com Grid Areas Internas [cite: 37] */
     .place-card {
         display: grid;
         grid-template-columns: 300px 1fr;
         grid-template-areas:
-            "photograph name"
+            "photograph title"
             "photograph description"
-            "photograph loction"
+            "photograph location"
             "photograph button";
         column-gap: 2rem;
-        text-align: left;
-        align-items: start;
         background: var(--color-white);
         padding: 1.5rem;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     }
 
-    /* Requisito: Imagens 300x200 isoladas na galeria [cite: 19, 24, 58] */
+    /* Mapeamento dos elementos para as áreas [cite: 41] */
+    .place-card h2 { grid-area: title; margin: 0; }
+    .place-card figure { grid-area: photograph; margin: 0; }
+    .place-card p { grid-area: description; }
+    .place-card address { grid-area: location; font-style: normal; }
+    .place-card button { grid-area: button; width: fit-content; }
+
+    /* Efeito de Hover - Apenas Desktop [cite: 54, 55] */
     #places-gallery .place-card img {
-        width: 300px !important;
-        height: 200px !important;
+        width: 300px;
+        height: 200px;
         object-fit: cover;
-        margin-bottom: 0;
-        filter: saturate(0.8);
         transition: transform 0.4s ease, filter 0.4s ease;
     }
 
-    /* Efeito de hover apenas em telas grandes [cite: 19, 86, 87] */
     #places-gallery .place-card img:hover {
-        filter: saturate(1.2);
+        filter: brightness(1.1) saturate(1.2);
         transform: scale(1.05);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+    }
+/* 4. DISCOVER PAGE - Layout com Áreas Nomeadas  */
+    #discover-grid {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-template-areas: "sidebar gallery"; /* Nomeação obrigatória [cite: 37] */
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 2rem;
     }
 
-    .place-card button {
+    .sidebar {
+        grid-area: sidebar;
+    }
+
+    .gallery {
+        grid-area: gallery;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    /* Card com Grid Areas Internas [cite: 37] */
+    .place-card {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-template-areas:
+            "photograph title"
+            "photograph description"
+            "photograph location"
+            "photograph button";
+        column-gap: 2rem;
+        background: var(--color-white);
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Mapeamento dos elementos para as áreas [cite: 41] */
+    .place-card h2 { grid-area: title; margin: 0; }
+    .place-card figure { grid-area: photograph; margin: 0; }
+    .place-card p { grid-area: description; }
+    .place-card address { grid-area: location; font-style: normal; }
+    .place-card button { grid-area: button; width: fit-content; }
+
+    /* Efeito de Hover - Apenas Desktop [cite: 54, 55] */
+    #places-gallery .place-card img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.4s ease, filter 0.4s ease;
+    }
+
+    #places-gallery .place-card img:hover {
+        filter: brightness(1.1) saturate(1.2);
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+    /* 4. DISCOVER PAGE - Layout com Áreas Nomeadas  */
+    #discover-grid {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-template-areas: "sidebar gallery"; /* Nomeação obrigatória [cite: 37] */
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 2rem;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+    }
+
+    .gallery {
+        grid-area: gallery;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    /* Card com Grid Areas Internas [cite: 37] */
+    .place-card {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-template-areas:
+            "photograph title"
+            "photograph description"
+            "photograph location"
+            "photograph button";
+        column-gap: 2rem;
+        background: var(--color-white);
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Mapeamento dos elementos para as áreas [cite: 41] */
+    .place-card h2 { grid-area: title; margin: 0; }
+    .place-card figure { grid-area: photograph; margin: 0; }
+    .place-card p { grid-area: description; }
+    .place-card address { grid-area: location; font-style: normal; }
+    .place-card button { grid-area: button; width: fit-content; }
+
+    /* Efeito de Hover - Apenas Desktop [cite: 54, 55] */
+    #places-gallery .place-card img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.4s ease, filter 0.4s ease;
+    }
+
+    #places-gallery .place-card img:hover {
+        filter: brightness(1.1) saturate(1.2);
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+/* 4. DISCOVER PAGE - Layout com Áreas Nomeadas  */
+    #discover-grid {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-template-areas: "sidebar gallery"; /* Nomeação obrigatória [cite: 37] */
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 2rem;
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+    }
+
+    .gallery {
+        grid-area: gallery;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    /* Card com Grid Areas Internas [cite: 37] */
+    .place-card {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-template-areas:
+            "photograph title"
+            "photograph description"
+            "photograph location"
+            "photograph button";
+        column-gap: 2rem;
+        background: var(--color-white);
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Mapeamento dos elementos para as áreas [cite: 41] */
+    .place-card h2 { grid-area: title; margin: 0; }
+    .place-card figure { grid-area: photograph; margin: 0; }
+    .place-card p { grid-area: description; }
+    .place-card address { grid-area: location; font-style: normal; }
+    .place-card button { grid-area: button; width: fit-content; }
+
+    /* Efeito de Hover - Apenas Desktop [cite: 54, 55] */
+    #places-gallery .place-card img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.4s ease, filter 0.4s ease;
+    }
+
+    #places-gallery .place-card img:hover {
+        filter: brightness(1.1) saturate(1.2);
+        transform: scale(1.05);
+        cursor: pointer;
+    }/* 4. DISCOVER PAGE - Layout com Áreas Nomeadas  */
+    #discover-grid {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-template-areas: "sidebar gallery";
+        /* Nomeação obrigatória [cite: 37] */
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 2rem;
+    }
+    
+    .sidebar {
+        grid-area: sidebar;
+    }
+    
+    .gallery {
+        grid-area: gallery;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    /* Card com Grid Areas Internas [cite: 37] */
+    .place-card {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-template-areas:
+            "photograph title"
+            "photograph description"
+            "photograph location"
+            "photograph button";
+        column-gap: 2rem;
+        background: var(--color-white);
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+    
+    /* Mapeamento dos elementos para as áreas [cite: 41] */
+    .place-card h2 {
+        grid-area: title;
         margin: 0;
+    }
+    
+    .place-card figure {
+        grid-area: photograph;
+        margin: 0;
+    }
+    
+    .place-card p {
+        grid-area: description;
+    }
+    
+    .place-card address {
+        grid-area: location;
+        font-style: normal;
+    }
+    
+    .place-card button {
+        grid-area: button;
+        width: fit-content;
+    }
+    
+    /* Efeito de Hover - Apenas Desktop [cite: 54, 55] */
+    #places-gallery .place-card img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.4s ease, filter 0.4s ease;
+    }
+    
+    #places-gallery .place-card img:hover {
+        filter: brightness(1.1) saturate(1.2);
+        transform: scale(1.05);
+        cursor: pointer;
     }
 
     /* 5. JOIN PAGE & FORM */
