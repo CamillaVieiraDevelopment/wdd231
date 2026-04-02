@@ -4,13 +4,17 @@
 :root {
     --font-primary: 'Roboto', sans-serif;
     --color-primary: #003366;
-    --color-white: #ffffff;
-    --color-border: #bccfeb;
-    --color-card-bg: #f9f9f9;
+    /* Azul Escuro */
     --color-accent: #0055aa;
-    --space-xs: 0.5rem;
-    --space-sm: 1rem;
-    --text-color: #333333;
+    /* Azul Destaque */
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-bg-light: #e6f2ff;
+    /* Substitui o rgb/hex manual do weather */
+    --color-card-bg: #f9f9f9;
+    --color-border: #bccfeb;
+    --color-overlay: rgba(0, 51, 102, 0.8);
+    /* Cor para o Hero */
 }
 
 body {
@@ -39,8 +43,7 @@ header {
     flex-direction: column;
     align-items: center;
     position: relative;
-}
-
+    }
 .logo-container {
     display: flex;
     align-items: center;

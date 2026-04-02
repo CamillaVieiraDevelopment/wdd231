@@ -10,26 +10,25 @@
         align-items: center;
     }
 
-    /* CORREÇÃO: Esconde o ícone de menu no desktop [cite: 19, 87] */
+    /* 1. NAVEGAÇÃO E MENU */
+    /* Esconde o hambúrguer e força a navegação horizontal [cite: 19, 87] */
     #menu {
         display: none !important;
     }
 
-    /* CORREÇÃO: Força a navegação horizontal e visível  */
     nav .navigation {
         display: flex !important;
         flex-direction: row;
         width: auto;
     }
 
-    /* Efeito Hover no Menu solicitado para destaque */
     .navigation li a:hover {
         background-color: var(--color-accent);
         color: var(--color-white);
         transition: 0.3s ease;
     }
 
-    /* --- HOME GRID --- */
+    /* 2. HOME GRID & HERO */
     .home-grid {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -44,10 +43,8 @@
     .hero {
         grid-area: hero;
         position: relative;
-        /* Mantém o contexto para a overlay */
     }
 
-    /* Garante que a imagem do Hero ocupe o espaço correto sem ser afetada pela regra 300x200 */
     .hero-img {
         width: 100% !important;
         height: auto !important;
@@ -55,9 +52,26 @@
         display: block;
     }
 
+    .cta-overlay {
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        width: 45%;
+        padding: 2.5rem;
+        background: var(--color-overlay, rgba(0, 51, 102, 0.8));
+        border-radius: 10px;
+        color: var(--color-white);
+        z-index: 5;
+    }
+
+    .cta-overlay h1 {
+        font-size: 2.5rem;
+    }
+
+    /* 3. SEÇÕES DA HOME */
     .events {
         grid-area: events;
-        background: white;
+        background: var(--color-white);
         padding: 1.5rem;
         border-radius: 8px;
         border-left: 8px solid var(--color-primary);
@@ -66,32 +80,15 @@
 
     .weather {
         grid-area: weather;
-        background: #e6f2ff;
+        background: var(--color-bg-light, #e6f2ff);
         padding: 1.5rem;
         border-radius: 8px;
-        border: 1px solid #bccfeb;
+        border: 1px solid var(--color-border);
         text-align: center;
     }
 
     .spotlights {
         grid-area: spotlights;
-    }
-
-    /* RESTAURAÇÃO: Overlay do Hero para não sumir */
-    .cta-overlay {
-        position: absolute;
-        top: 20%;
-        left: 5%;
-        width: 45%;
-        padding: 2.5rem;
-        background: rgba(0, 51, 102, 0.8);
-        border-radius: 10px;
-        color: white;
-        z-index: 5;
-    }
-
-    .cta-overlay h1 {
-        font-size: 2.5rem;
     }
 
     #business-spotlights,
@@ -101,7 +98,7 @@
         gap: 1.5rem;
     }
 
-    /* --- DISCOVER PAGE - THIRD LAYOUT [cite: 51, 69] --- */
+    /* 4. DISCOVER PAGE [cite: 51, 69] */
     #discover-grid {
         display: grid;
         grid-template-columns: 300px 1fr;
@@ -116,7 +113,7 @@
         gap: 2rem;
     }
 
-    /* Layout Horizontal com Named Grid Areas [cite: 19, 69] */
+    /* Consolidação da regra .place-card para evitar erro de repetição [cite: 19, 69] */
     .place-card {
         display: grid;
         grid-template-columns: 300px 1fr;
@@ -128,14 +125,13 @@
         column-gap: 2rem;
         text-align: left;
         align-items: start;
-        background: white;
+        background: var(--color-white);
         padding: 1.5rem;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     }
 
-    /* REQUISITO: Imagens Webp em 300x200 [cite: 19, 24, 58] */
-    /* Seletor específico para não afetar Hero ou Moedas do Form */
+    /* Requisito: Imagens 300x200 isoladas na galeria [cite: 19, 24, 58] */
     #places-gallery .place-card img {
         width: 300px !important;
         height: 200px !important;
@@ -145,7 +141,7 @@
         transition: transform 0.4s ease, filter 0.4s ease;
     }
 
-    /* REQUISITO: Efeito de hover apenas em telas grandes [cite: 19, 86, 87] */
+    /* Efeito de hover apenas em telas grandes [cite: 19, 86, 87] */
     #places-gallery .place-card img:hover {
         filter: saturate(1.2);
         transform: scale(1.05);
@@ -156,14 +152,13 @@
         margin: 0;
     }
 
-    /* --- JOIN PAGE / DIRECTORY --- */
+    /* 5. JOIN PAGE & FORM */
     .join-content-wrapper {
         display: grid;
         grid-template-columns: 1.2fr 1fr;
         gap: 3rem;
     }
 
-    /* Garante que os ícones de moedas no formulário não fiquem 300x200 */
     .coin-img {
         width: 80px !important;
         height: auto !important;
