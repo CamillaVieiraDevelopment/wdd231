@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--accent-color);
+    text-align: center;
+    color: var(--text-dark);
+
+    margin: 0;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--text-dark);
+}
+
+/* appointment_request.css */
+
+main {
+    padding: 4rem 2rem;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main h1 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+main p {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
