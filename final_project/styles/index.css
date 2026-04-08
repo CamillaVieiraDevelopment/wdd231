@@ -270,15 +270,96 @@ footer p {
 }
 
 /* =====================================================
-   Responsive (Mobile)
+    Hamburger Menu (Hidden on Desktop by default)
 ===================================================== */
-@media (max-width: 768px) {
+#hamburger-menu {
+    display: none;
+    font-size: 2.5rem;
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
 
-    header {
-        flex-direction: column;
-        gap: 1rem;
+#hamburger-menu:hover {
+    color: var(--cta-bg-color);
+}
+
+/* =====================================================
+    Responsiveness: 3 Viewport Modes
+===================================================== */
+
+/* 1. DESKTOP (> 1024px) 
+    Uses default rules already defined above in the file. No media query needed. */
+
+/* 2. TABLET (Max 1024px) */
+@media (max-width: 1024px) {
+    nav ul {
+        gap: 1.5rem;
+        /* Reduces spacing between links */
     }
 
+    nav a {
+        font-size: 1.5rem;
+        /* Slightly decreases menu font size */
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* 3. MOBILE (Max 768px) */
+@media (max-width: 768px) {
+
+    /* Adjusts Header to keep Logo and Button on the same row */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 1.5rem;
+    }
+
+    .logo img {
+        width: 180px;
+        /* Slightly smaller logo for mobile */
+    }
+
+    /* Shows the hamburger button */
+    #hamburger-menu {
+        display: block;
+    }
+
+    /* Hides navigation and prepares for the open/close effect */
+    nav {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    nav ul {
+        display: none;
+        /* Hidden by default */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+        background-color: var(--primary-color);
+        padding: 1rem 0;
+        border-radius: 10px;
+    }
+
+    /* Class that JavaScript will add to open the menu */
+    nav ul.open {
+        display: flex;
+    }
+
+    /* Global mobile adjustments already present in the project */
     .hero,
     .info-section {
         grid-template-columns: 1fr;
@@ -290,7 +371,7 @@ footer p {
     }
 
     .cloud-frame img {
-        max-width: 420px;
+        max-width: 100%;
         margin: auto;
     }
 }
