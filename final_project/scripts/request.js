@@ -1,5 +1,6 @@
 /* scripts/request.js - Confirmation page logic */
 document.addEventListener("DOMContentLoaded", () => {
+    console.log("URL Parameters:", window.location.search);
     const params = new URLSearchParams(window.location.search);
     const resultsContainer = document.getElementById('results');
 
