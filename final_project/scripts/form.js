@@ -36,21 +36,42 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // --- LÓGICA DO MODAL ---
+    const errorModal = document.querySelector('#errorModal');
+    const closeModal = document.querySelector('#closeModal');
+
+    // Fechar o modal quando o botão for clicado
+    if (closeModal && errorModal) {
+        closeModal.addEventListener('click', () => {
+            errorModal.close();
+        });
+    }
+
     // Handle Form Submission
     const appointmentForm = document.querySelector("form");
     if (appointmentForm) {
         appointmentForm.addEventListener("submit", (e) => {
             const userName = document.querySelector("#username").value;
 
-            // Conditional Branching
+            // Conditional Branching (Validação usando o Modal em vez do alert)
             if (userName.trim() === "") {
-                alert("Please enter a valid name.");
-                e.preventDefault();
+                e.preventDefault(); // Impede o envio do formulário para a próxima página
+                if (errorModal) {
+                    errorModal.showModal(); // Abre o Modal HTML
+                } else {
+                    alert("Please enter a valid name."); // Prevenção caso o HTML do modal falte
+                }
             } else {
-                // LocalStorage
+                // LocalStorage: Atualiza contagem de agendamentos
                 localStorage.setItem("lastPatientName", userName);
                 localStorage.setItem("appointmentCount", Number(localStorage.getItem("appointmentCount") || 0) + 1);
             }
         });
+    }
+
+    // --- ATUALIZAR CONTADOR NA PÁGINA DE CONFIRMAÇÃO ---
+    const counterElement = document.querySelector("#counter");
+    if (counterElement) {
+        counterElement.textContent = localStorage.getItem("appointmentCount") || 0;
     }
 });

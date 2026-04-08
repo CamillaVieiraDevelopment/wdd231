@@ -3,23 +3,58 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description"content=" Official home page Decole Psychopedagogical Clinic for cognitive development, learning support, and humanized care.">
+    <meta name="description"
+        content="Official home page Decole Psychopedagogical Clinic for cognitive development, learning support, and humanized care.">
     <meta name="author" content="Camilla Francianne Silva Ribeiro Vieira">
-    
+
     <meta property="og:title" content="Decole Psychopedagogical Clinic - Home">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://camillavieiradevelopment.github.io/wdd231/final_project/images/hero_image.png">
+    <meta property="og:image"
+        content="https://camillavieiradevelopment.github.io/wdd231/final_project/images/hero_image.png">
     <meta property="og:url" content="https://camillavieiradevelopment.github.io/wdd231/final_project/index.html">
     <meta property="og:description" content="Connecting services Psychopedagogicals Clinic in Curitiba. ">
-    
+
     <link rel="icon" href="images/favicon.ico">
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/form.css">
     <link rel="stylesheet" href="styles/appointment_request.css">
+
     <script src="scripts/main.js" defer></script>
     <script src="scripts/form.js" defer></script>
+
+    <style>
+        .confirmation-box {
+            background-color: var(--accent-color);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--secondary-color);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .confirmation-box p {
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+        }
+
+        .confirmation-box strong {
+            color: var(--secondary-color);
+        }
+
+        .back-btn {
+            background-color: var(--cta-bg-color);
+            color: var(--primary-color);
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,9 +63,9 @@
             <img src="images/logo.png" alt="Decole Clinic Psychopedagogical Logo" loading="lazy">
             <span>When learning creates wings! 🪽</span>
         </div>
-    
+
         <button id="hamburger-menu" aria-label="Abrir menu">☰</button>
-    
+
         <nav>
             <ul id="nav-list">
                 <li><a href="index.html">Home</a></li>
@@ -40,19 +75,27 @@
             </ul>
         </nav>
     </header>
-    
-    <main>
-        <h1>Thank you for sending your appointment request!</h1>
+
+    <main style="max-width: 800px; margin: 2rem auto; padding: 0 2rem;">
+        <h1 style="color: var(--primary-color);">Thank you for sending your appointment request! 🎉</h1>
         <p>The appointment request form has been completed; we will contact you to confirm the time.</p>
 
-        <p>You have submitted <span id="counter" style="font-weight: bold; color: var(--secondary-color);">0</span>
-            requests so far.</p>
+        <div class="confirmation-box" id="results">
+        </div>
+
+        <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+            You have submitted <span id="counter" style="font-weight: bold; color: var(--secondary-color);">0</span>
+            requests so far.
+        </p>
+
+        <a href="index.html" class="back-btn">Return to Home</a>
     </main>
 
     <footer>
         <p>&copy; <span id="year"></span> | Camilla Francianne Vieira | Decole Psychopedagogical Clinic</p>
         <p id="lastModified"></p>
     </footer>
+
 </body>
 
 </html>
