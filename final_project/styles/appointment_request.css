@@ -39,9 +39,7 @@ main p {
 
 .confirmation-box {
     text-align: left;
-    /* Alinha o texto à esquerda */
     padding-left: 2rem;
-    /* Adiciona um espaço extra na esquerda para não colar na borda */
 }
 
 .confirmation-box {
@@ -50,11 +48,9 @@ main p {
     flex-direction: column;
     justify-content: center;
     gap: 0.5rem;
-    /* Controla o espaçamento entre as linhas */
     padding: 1.5rem 2rem;
 }
 
 .confirmation-box p {
     margin: 0;
-    /* Remove margens padrão para o gap controlar o espaço */
 }
