@@ -26,33 +26,44 @@ async function getServicesData() {
 }
 
 // Função para gerar o HTML dinamicamente
+// Função para gerar o HTML dinamicamente com Efeito Flip
 function displayServices(services) {
     const container = document.querySelector('#services-container');
-
-    // Esvazia o contêiner (garantia)
     container.innerHTML = "";
 
-    // Array Method: forEach iterando sobre os 15 itens
     services.forEach(service => {
-        // Cria o elemento card
         const card = document.createElement('div');
         card.classList.add('service-card');
 
-        // Usa Template Literals para estruturar o conteúdo
+        // Estrutura Frente e Verso (Card Inner, Card Front, Card Back)
         card.innerHTML = `
-            <div class="circle-icon">
-                <img src="images/${service.id}.png" alt="${service.name}" loading="lazy" onerror="this.src='images/logo.png'">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="circle-icon">
+                        <img src="images/${service.id}.png" alt="${service.name}" loading="lazy" onerror="this.src='images/logo.png'">
+                    </div>
+                    <h3>${service.name}</h3>
+                    <p><strong>Duration:</strong> ${service.duration}</p>
+                    <p><strong>Price:</strong> ${service.price}</p>
+                    <span class="click-hint">Click to read more ↺</span>
+                </div>
+                
+                <div class="card-back">
+                    <h3>${service.name}</h3>
+                    <p>${service.description || "Description coming soon."}</p>
+                    <span class="click-hint">Click to go back ↺</span>
+                </div>
             </div>
-            <h3>${service.name}</h3>
-            <p><strong>Duration:</strong> ${service.duration}</p>
-            <p><strong>Price:</strong> ${service.price}</p>
         `;
 
-        // Adiciona o card ao contêiner principal
+        // Evento de Clique para virar o Card
+        card.addEventListener('click', () => {
+            card.classList.toggle('flipped');
+        });
+
         container.appendChild(card);
     });
 }
-
 // Inicia o processo quando o DOM estiver carregado
 document.addEventListener("DOMContentLoaded", () => {
     getServicesData();

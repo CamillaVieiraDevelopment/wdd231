@@ -1,12 +1,14 @@
 /* styles/services.css */
 
+/* =====================================================
+   Page Title & Grid Layout
+===================================================== */
 .page-title {
     font-size: 2.5rem;
     text-align: center;
     background-color: var(--secondary-color);
     color: var(--accent-color);
     padding: 2.5rem 0;
-    /* Espaçamento vertical */
     margin: 0;
 }
 
@@ -19,26 +21,71 @@
     min-height: 60vh;
 }
 
+/* =====================================================
+   3D Flip Card Container
+===================================================== */
 .service-card {
-    background-color: var(--accent-color);
-    padding: 40px 30px;
-    border-radius: 20px;
+    background-color: transparent;
+    perspective: 1000px;
+    /* Creates the 3D depth */
+    min-height: 420px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+/* Hover: Card lift effect (preserved from original) */
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+/* =====================================================
+   Flip Card Inner Mechanics
+===================================================== */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
     text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    /* Ensures the back is also 3D */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+/* Enhances shadow on hover for the 3D element */
+.service-card:hover .card-inner {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Flipped state activated by JS */
+.service-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Common styles for Front and Back */
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* Hides the back of the element */
+    border-radius: 20px;
+    padding: 40px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* e Hover: Card with shadow*/
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-    cursor: default;
+/* =====================================================
+   Card Front
+===================================================== */
+.card-front {
+    background-color: var(--accent-color);
 }
 
-/* Circule Container for images */
+/* Circle Container for images (preserved from original) */
 .circle-icon {
     width: 180px;
     height: 180px;
@@ -53,7 +100,7 @@
     transition: transform 0.4s ease;
 }
 
-/* Zoom the image lighting on hover of card */
+/* Zoom the image lighting on hover of card (preserved) */
 .service-card:hover .circle-icon {
     transform: scale(1.1);
 }
@@ -66,23 +113,65 @@
 
 /* Titles in bold */
 .service-card h3 {
-    color: var(--primary-color);
     font-weight: 700;
     margin-bottom: 15px;
     font-size: 1.5rem;
     min-height: 3.6rem;
 }
 
-/* Description text wihtout bold */
-.service-card p {
+.card-front h3 {
     color: var(--primary-color);
-    font-weight: 400;
-    line-height: 1.6;
-    text-align: justify;
-    font-size: 0.95rem;
 }
 
-/* Responsivity: Adjust for 2 columns on tablets e 1 in celphones */
+.card-front p {
+    color: var(--primary-color);
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+/* =====================================================
+   Card Back
+===================================================== */
+.card-back {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    transform: rotateY(180deg);
+    /* The back starts flipped */
+    justify-content: center;
+    overflow-y: auto;
+    /* Adds scrollbar if text is too long */
+}
+
+.card-back h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+/* Description text styles (adapted for back side) */
+.card-back p {
+    color: var(--accent-color);
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+/* =====================================================
+   Click Hint Text
+===================================================== */
+.click-hint {
+    margin-top: auto;
+    /* Pushes the text to the bottom */
+    font-size: 0.85rem;
+    font-style: italic;
+    opacity: 0.7;
+    font-weight: bold;
+    color: inherit;
+}
+
+/* =====================================================
+   Responsivity
+===================================================== */
 @media (max-width: 1100px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);

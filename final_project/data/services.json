@@ -4,13 +4,15 @@
             "id": "assessment",
             "name": "Psychopedagogical Assessment",
             "price": "$150",
-            "duration": "60 min"
+            "duration": "60 min",
+            "description": "The psychopedagogical assessment is a careful and comprehensive process aimed at understanding how the individual learns, identifying possible learning difficulties, strengths, and learning styles. It includes interviews, observations, playful activities, and specific assessment tools."
         },
         {
             "id": "intervention",
             "name": "Psychopedagogical Intervention",
             "price": "$120",
-            "duration": "50 min"
+            "duration": "50 min",
+            "description": "Psychopedagogical intervention is developed based on the assessment results and aims to promote the patient’s cognitive, emotional, and academic development. Sessions are personalized and use playful, educational, and therapeutic strategies."
         },
         {
             "id": "family",
