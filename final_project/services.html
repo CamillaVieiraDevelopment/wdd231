@@ -25,7 +25,8 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/services.css">
-    <script src="scripts/main.js" defer></script>
+    <script src="scripts/main.js" type="module"></script>
+    <script src="scripts/services.js" type="module"></script>
 
 </head>
 
@@ -50,75 +51,9 @@
     
     <main>
         <h1 class="page-title">Our Services:</h1>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="circle-icon">
-                    <img src="images/assessment.png" alt="Psychopedagogical Assessment" loading="lazy">>
-                </div>
-                <h3>Psychopedagogical Assessment</h3>
-                <p>The psychopedagogical assessment is a careful and comprehensive process aimed at understanding how
-                    the individual learns, identifying possible learning difficulties, strengths, and learning styles.
-                    It includes interviews, observations, playful activities, and specific assessment tools, allowing
-                    for an accurate evaluation that guides the most appropriate interventions for each case.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="circle-icon">
-                    <img src="images/intervention.png" alt="Psychopedagogical Intervention" loading="lazy">>
-                </div>
-                <h3>Psychopedagogical Intervention</h3>
-                <p>Psychopedagogical intervention is developed based on the assessment results and aims to promote the
-                    patient’s cognitive, emotional, and academic development. Sessions are personalized and use playful,
-                    educational, and therapeutic strategies to foster autonomy, self-confidence, and enjoyment in the
-                    learning process.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="circle-icon">
-                    <img src="images/family.png" alt="Family Guidance" loading="lazy">>
-                </div>
-                <h3>Family Guidance</h3>
-                <p>Family guidance provides support to parents and caregivers, helping them understand learning
-                    difficulties and the patient’s developmental process. Working collaboratively with the family
-                    strengthens relationships, aligns expectations, and offers practical strategies for daily life,
-                    significantly contributing to the effectiveness of psychopedagogical care.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="circle-icon">
-                    <img src="images/academic.png" alt="Academic Support" loading="lazy">>
-                </div>
-                <h3>Academic Support</h3>
-                <p>Academic support is designed to assist students with study organization, understanding school
-                    content, and developing more effective study habits. The work respects each student’s learning pace,
-                    promoting confidence, autonomy, and improved academic performance.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="circle-icon">
-                    <img src="images/difficulties.png" alt="Support for Learning Difficulties" loading="lazy">>
-                </div>
-                <h3>Support for Learning Difficulties</h3>
-                <p>This service is aimed at children, adolescents, and adults who experience specific learning
-                    difficulties, such as reading, writing, mathematics, attention, or memory challenges. The
-                    psychopedagogical approach seeks to identify the underlying causes of these difficulties and develop
-                    strategies to help overcome barriers in the learning process.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="circle-icon">
-                    <img src="images/hospital.png" alt="Hospital Support" loading="lazy">>
-                </div>
-                <h3>Psychopedagogical Support for Long-Term Hospitalized Patients</h3>
-                <p>Psychopedagogical support in hospital settings and healthcare institutions aims to ensure continuity
-                    in the learning process while respecting the patient’s physical and emotional conditions. This
-                    service contributes to well-being, helps maintain the connection with learning, and promotes
-                    humanized care through cognitive and emotional stimulation during long-term hospitalization or
-                    treatment.</p>
-            </div>
+        <div class="services-grid" id="services-container">
         </div>
     </main>
-
     <footer>
         <p>&copy; <span id="year"></span> | Camilla Francianne Vieira | Decole Psychopedagogical Clinic</p>
         <p id="lastModified"></p>

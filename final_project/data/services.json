@@ -1,0 +1,94 @@
+{
+    "services": [
+        {
+            "id": "assessment",
+            "name": "Psychopedagogical Assessment",
+            "price": "$150",
+            "duration": "60 min"
+        },
+        {
+            "id": "intervention",
+            "name": "Psychopedagogical Intervention",
+            "price": "$120",
+            "duration": "50 min"
+        },
+        {
+            "id": "family",
+            "name": "Family Guidance",
+            "price": "$100",
+            "duration": "45 min"
+        },
+        {
+            "id": "academic",
+            "name": "Academic Support",
+            "price": "$80",
+            "duration": "60 min"
+        },
+        {
+            "id": "difficulties",
+            "name": "Support for Learning Difficulties",
+            "price": "$110",
+            "duration": "50 min"
+        },
+        {
+            "id": "hospital",
+            "name": "Hospitalized Patient Support",
+            "price": "$130",
+            "duration": "45 min"
+        },
+        {
+            "id": "literacy",
+            "name": "Literacy Support",
+            "price": "$90",
+            "duration": "50 min"
+        },
+        {
+            "id": "attention",
+            "name": "Attention Training",
+            "price": "$115",
+            "duration": "40 min"
+        },
+        {
+            "id": "cognitive",
+            "name": "Cognitive Stimulation",
+            "price": "$125",
+            "duration": "50 min"
+        },
+        {
+            "id": "social",
+            "name": "Social Skills Workshop",
+            "price": "$70",
+            "duration": "90 min"
+        },
+        {
+            "id": "writing",
+            "name": "Writing Skills Lab",
+            "price": "$85",
+            "duration": "60 min"
+        },
+        {
+            "id": "math",
+            "name": "Logical-Mathematical Reasoning",
+            "price": "$95",
+            "duration": "50 min"
+        },
+        {
+            "id": "test_prep",
+            "name": "Test Anxiety Support",
+            "price": "$110",
+            "duration": "45 min"
+        },
+        {
+            "id": "executive",
+            "name": "Executive Function Coaching",
+            "price": "$140",
+            "duration": "50 min"
+        },
+        {
+            "id": "motor",
+            "name": "Graphomotor Development",
+            "price": "$105",
+            "duration": "45 min"
+        }
+    ]
+}
