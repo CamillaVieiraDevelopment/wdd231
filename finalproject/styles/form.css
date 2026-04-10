@@ -1,12 +1,62 @@
 /* styles/form.css */
+
+/* =====================================================
+   Scheduling Layout (Grid and Calendar)
+===================================================== */
+.scheduling-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two equal columns for Desktop */
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    align-items: start;
+}
+
+.calendar-sidebar {
+    background-color: var(--accent-color);
+    padding: 2rem;
+    border-radius: 15px;
+    color: var(--primary-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.calendar-sidebar h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.calendar-wrapper {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+/* =====================================================
+   Form Container
+===================================================== */
 .form-container {
     max-width: 600px;
-    margin: 2rem auto;
+    margin: 0;
     padding: 2rem;
     background-color: var(--accent-color);
     border-radius: 15px;
     color: var(--primary-color);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* New Highlighted Text Style */
+.form-highlight {
+    font-weight: bold;
+    /* Negritado */
+    font-size: 1.25rem;
+    /* Maior que o padrão */
+    line-height: 1.4;
+    color: var(--secondary-color);
+    /* Usando sua cor verde para destaque */
+    margin-bottom: 1rem;
 }
 
 .form-container h1 {
@@ -79,7 +129,6 @@ dialog {
     color: var(--primary-color);
     text-align: center;
     margin: auto;
-    /* Centraliza na tela */
 }
 
 dialog::backdrop {
@@ -89,7 +138,6 @@ dialog::backdrop {
 dialog h2 {
     margin-bottom: 10px;
     color: #d9534f;
-    /* Cor de alerta */
 }
 
 #closeModal {
@@ -106,4 +154,25 @@ dialog h2 {
 
 #closeModal:hover {
     filter: brightness(0.9);
+}
+
+/* =====================================================
+   Responsiveness
+===================================================== */
+@media (max-width: 900px) {
+    .scheduling-grid {
+        grid-template-columns: 1fr;
+        /* Stacks Form and Calendar on Mobile [cite: 77] */
+    }
+
+    .form-container {
+        max-width: 100%;
+        order: 1;
+        /* Form stays on top */
+    }
+
+    .calendar-sidebar {
+        order: 2;
+        /* Calendar goes below */
+    }
 }
