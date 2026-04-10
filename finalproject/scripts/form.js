@@ -36,7 +36,23 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // --- LÓGICA DO MODAL ---
+    // --- POPULATE APPOINTMENT TIME SELECT (Full Hours Only) ---
+    const timeSelect = document.querySelector("#appointmentTime");
+    if (timeSelect) {
+        // Array of business hours (8 AM to 5 PM)
+        const businessHours = ["08:00", "09:00", "10:00", "11:00", "13:00", "14:00", "15:00", "16:00", "17:00"];
+
+        // Using Array Method (forEach) to process data efficiently
+        businessHours.forEach(hour => {
+            const option = document.createElement("option");
+            option.value = hour;
+            // Using Template Literal for string construction
+            option.textContent = `${hour}`;
+            timeSelect.appendChild(option);
+        });
+    }
+
+    // --- MODAL LOGIC ---
     const errorModal = document.querySelector('#errorModal');
     const closeModal = document.querySelector('#closeModal');
 
@@ -69,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // --- ATUALIZAR CONTADOR NA PÁGINA DE CONFIRMAÇÃO ---
+    // --- UPDATE THE COUNTER OF APPOINTMENTS ON THE CONFIRMATION PAGE ---
     const counterElement = document.querySelector("#counter");
     if (counterElement) {
         counterElement.textContent = localStorage.getItem("appointmentCount") || 0;

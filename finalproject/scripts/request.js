@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.location.search) {
         const service = params.get('service') || 'Not specified';
         const date = params.get('appointmentDate') || 'Not specified';
+        const appointmentTime = params.get('appointmentTime') || 'Not specified';
         const period = params.get('period') || 'Not specified';
         const notes = params.get('notes') || 'None';
         const username = params.get('username') || 'Valued Client';
@@ -30,12 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 <p><strong>Email:</strong> ${email}</p>
                 <p><strong>Service:</strong> ${readableService}</p>
                 <p><strong>Preferred Date:</strong> ${date}</p>
-                <p><strong>Period:</strong> ${period}</p>
+                <p><strong>Preferred Time:</strong> ${appointmentTime}</p>
                 <p><strong>Additional Notes:</strong> ${notes}</p>
             `;
         }
     } else if (resultsContainer) {
         resultsContainer.innerHTML = "<p>No specific request details found.</p>";
+        resultsContainer.innerHTML += `<p><strong>Preferred Time:</strong> ${appointmentTime}</p>`;
     }
 
     // Updates the counter (logic similar to form.js, but focused here)

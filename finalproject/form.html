@@ -62,16 +62,11 @@
                 <label for="appointmentDate">Preferred Date</label>
                 <input type="date" id="appointmentDate" name="appointmentDate" required>
 
-                <fieldset>
-                    <legend>Preferred Period</legend>
-                    <label for="morning">
-                        <input type="radio" id="morning" name="period" value="Morning" required> Morning
-                    </label>
-                    <label for="afternoon">
-                        <input type="radio" id="afternoon" name="period" value="Afternoon"> Afternoon
-                    </label>
-                </fieldset>
-
+                <label for="appointmentTime">Preferred Time (Whole Hours)</label>
+                <select id="appointmentTime" name="appointmentTime" required>
+                    <option value="" disabled selected>Select one hour...</option>
+                </select>
+               
                 <label for="notes">Additional Information (Patient's age, specific needs, etc.)</label>
                 <textarea id="notes" name="notes" placeholder="Tell us a little about your needs..."></textarea>
 
