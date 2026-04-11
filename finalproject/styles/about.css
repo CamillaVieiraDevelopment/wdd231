@@ -36,7 +36,7 @@
     box-shadow: 0 4px 10px rgba(57, 1, 71, 0.3);
 }
 
-.card h3 {
+.card h2 {
     margin-bottom: 0.5rem;
     color: var(--secondary-color);
     font-size: 2rem;
