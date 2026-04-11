@@ -298,12 +298,10 @@ footer p {
 @media (max-width: 1024px) {
     nav ul {
         gap: 1.5rem;
-        /* Reduces spacing between links */
     }
 
     nav a {
         font-size: 1.5rem;
-        /* Slightly decreases menu font size */
     }
 
     .hero h1 {
@@ -318,7 +316,6 @@ footer p {
 /* 3. MOBILE (Max 768px) */
 @media (max-width: 768px) {
 
-    /* Adjusts Header to keep Logo and Button on the same row */
     header {
         flex-direction: row;
         justify-content: space-between;
@@ -329,7 +326,6 @@ footer p {
 
     .logo img {
         width: 180px;
-        /* Slightly smaller logo for mobile */
     }
 
     /* Shows the hamburger button */

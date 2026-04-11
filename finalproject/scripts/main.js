@@ -1,27 +1,27 @@
 /* scripts/main.js - Global Functionality */
 
-// 1. Importando as funções do seu ES Module (Requisito da Rubrica)
+// 1. Importing functions from your ES Module (Rubric Requirement)
 import { getFormattedDate, updateLastModified } from './utils.js';
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // 2. Aplicando as funções importadas do utils.js no rodapé
+    // 2. Applying the functions imported from utils.js to the footer
     const yearSpan = document.querySelector("#year");
     if (yearSpan) yearSpan.textContent = getFormattedDate();
 
     const lastMod = document.querySelector("#lastModified");
     if (lastMod) lastMod.textContent = updateLastModified();
 
-    // 3. Lógica do Menu Hambúrguer
+    // 3. Hamburger Menu Logic
     const hamburgerBtn = document.getElementById("hamburger-menu");
     const navList = document.getElementById("nav-list");
 
     if (hamburgerBtn && navList) {
         hamburgerBtn.addEventListener("click", () => {
-            // Alterna a classe 'open' na lista de navegação
+            // Toggles the 'open' class on the navigation list
             navList.classList.toggle("open");
 
-            // Alterna o ícone de hambúrguer (☰) para o 'X' (✖) quando aberto
+            // Toggles the hamburger icon (☰) to 'X' (✖) when open
             if (navList.classList.contains("open")) {
                 hamburgerBtn.textContent = "✖";
             } else {

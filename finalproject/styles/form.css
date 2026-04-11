@@ -16,7 +16,6 @@ General Styles
 .scheduling-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* Two equal columns for Desktop */
     gap: 2rem;
     max-width: 1200px;
     margin: 2rem auto;
@@ -172,17 +171,14 @@ dialog h2 {
 @media (max-width: 900px) {
     .scheduling-grid {
         grid-template-columns: 1fr;
-        /* Stacks Form and Calendar on Mobile [cite: 77] */
     }
 
     .form-container {
         max-width: 100%;
         order: 1;
-        /* Form stays on top */
     }
 
     .calendar-sidebar {
         order: 2;
-        /* Calendar goes below */
     }
 }
