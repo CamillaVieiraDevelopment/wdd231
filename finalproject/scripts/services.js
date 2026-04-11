@@ -1,41 +1,53 @@
-/* scripts/services.js - Fetch and Dynamic Generation */
+/* =====================================================
+   scripts/services.js - Fetch and Dynamic Generation
+   ===================================================== */
 
-// Função assíncrona para buscar os dados JSON
+/**
+ * Async function to fetch services data from the JSON file
+ */
 async function getServicesData() {
     try {
-        // AQUI FOI A CORREÇÃO: Adicionado o 'data/' antes do nome do arquivo
+        // Fetching the JSON data from the data folder
         const response = await fetch('data/services.json');
 
-        // Verifica se a resposta da rede foi bem-sucedida
+        // Check if the network response was successful
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const data = await response.json();
 
-        // Chama a função para exibir os itens na tela
+        // Call the function to render items on the screen
         displayServices(data.services);
 
     } catch (error) {
         console.error("Failed to fetch services data:", error);
         const container = document.querySelector('#services-container');
         if (container) {
-            container.innerHTML = `<p style="text-align: center; width: 100%; color: red;">Sorry, we couldn't load the services at this time. Please make sure you are using Live Server.</p>`;
+            container.innerHTML = `
+                <p style="text-align: center; width: 100%; color: red;">
+                    Sorry, we couldn't load the services at this time. Please try again later.
+                </p>`;
         }
     }
 }
 
-// Função para gerar o HTML dinamicamente
-// Função para gerar o HTML dinamicamente com Efeito Flip
+/**
+ * Function to dynamically generate HTML with the Flip Effect
+ * @param {Array} services - Array of service objects from JSON
+ */
 function displayServices(services) {
     const container = document.querySelector('#services-container');
+    if (!container) return;
+
     container.innerHTML = "";
 
     services.forEach(service => {
         const card = document.createElement('div');
         card.classList.add('service-card');
 
-        // Estrutura Frente e Verso (Card Inner, Card Front, Card Back)
+        // Structure for Front and Back (Card Inner, Card Front, Card Back)
+        // Includes the new service-note element to display the hint from JSON
         card.innerHTML = `
             <div class="card-inner">
                 <div class="card-front">
@@ -45,6 +57,9 @@ function displayServices(services) {
                     <h3>${service.name}</h3>
                     <p><strong>Duration:</strong> ${service.duration}</p>
                     <p><strong>Price:</strong> ${service.price}</p>
+                    
+                    <p class="service-note">${service.note || "Click to view description"}</p>
+                    
                     <span class="click-hint">Click to read more ↺</span>
                 </div>
                 
@@ -56,7 +71,7 @@ function displayServices(services) {
             </div>
         `;
 
-        // Evento de Clique para virar o Card
+        // Click Event to toggle the 'flipped' class
         card.addEventListener('click', () => {
             card.classList.toggle('flipped');
         });
@@ -64,7 +79,10 @@ function displayServices(services) {
         container.appendChild(card);
     });
 }
-// Inicia o processo quando o DOM estiver carregado
+
+/* =====================================================
+   Initialization
+   ===================================================== */
 document.addEventListener("DOMContentLoaded", () => {
     getServicesData();
 });

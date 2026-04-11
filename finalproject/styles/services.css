@@ -84,6 +84,19 @@
 .card-front {
     background-color: var(--accent-color);
 }
+/* Styling for the new informative note */
+.service-note {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    font-style: italic;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    /* A subtle highlight */
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
 
 /* Circle Container for images (preserved from original) */
 .circle-icon {
@@ -114,7 +127,7 @@
 /* Titles in bold */
 .service-card h3 {
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-size: 1.5rem;
     min-height: 3.6rem;
 }
