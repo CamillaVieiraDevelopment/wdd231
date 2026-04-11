@@ -2,9 +2,8 @@
 .page-title {
     text-align: center;
     color: var(--accent-color);
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     /* Defina a cor de fundo desejada aqui */
-    padding: 2rem 0;
     margin: 0;
 }
 .about-content {
