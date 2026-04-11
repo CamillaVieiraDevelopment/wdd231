@@ -17,7 +17,6 @@
     .gallery {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        /* Layout em grade para tablet [cite: 69] */
         gap: 1.5rem;
     }
 
@@ -33,6 +32,5 @@
 
     .place-card button {
         margin: 0;
-        /* Alinha à esquerda para melhor design */
     }
 }

@@ -23,7 +23,6 @@
     .gallery {
         display: flex;
         flex-direction: column;
-        /* Layout em lista horizontal para desktop */
     }
 
     .place-card {
@@ -36,7 +35,7 @@
         column-gap: 2rem;
     }
 
-    /* EFEITO DE HOVER - Requisito 13 */
+    /* HOVER*/
     #places-gallery .place-card img {
         transition: transform 0.4s ease, filter 0.4s ease;
     }
