@@ -106,7 +106,7 @@ nav a.active {
 
 .welcome-badge {
     background-color: var(--secondary-color);
-    color: var(--accent-color)
+    color: var(--accent-color);
     padding: 0.4rem 1rem;
     border-radius: 20px;
     display: inline-block;
