@@ -1,6 +1,11 @@
 /* =========================================
-   GLOBAL VARIABLES & BASE
+    GLOBAL VARIABLES & RESET
 ========================================= */
+* {
+    box-sizing: border-box;
+    /* Prevents side white gap by including padding in width */
+}
+
 :root {
     --font-primary: 'Roboto', sans-serif;
     --color-primary: #003366;
@@ -12,12 +17,13 @@
     --color-border: #bccfeb;
     --color-overlay: rgba(0, 51, 102, 0.8);
     --space-sm: 1rem;
-    /* Adicionado para garantir proximidade e alinhamento */
 }
 
 body {
     font-family: var(--font-primary);
     margin: 0;
+    overflow-x: hidden;
+    /* Avoids unwanted horizontal scrolling */
 }
 
 main {
@@ -33,39 +39,47 @@ main {
 }
 
 /* =========================================
-   HEADER & NAV
+    HEADER & NAV
 ========================================= */
 header {
     background: var(--color-primary);
     color: var(--color-white);
-    padding: var(--space-sm);
+    padding: 1.2rem var(--space-sm);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    /* Aligns to the left on mobile to provide space for the icon */
     position: relative;
+    width: 100%;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: var(--space-sm);
+    gap: 0.8rem;
+    max-width: 75%;
+    /* Ensures text doesn't overlap the icon */
 }
 
 .logo-container img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--color-white);
 }
 
+.logo-container span {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
 #menu {
     display: block;
     position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    font-size: 2.5rem;
+    top: 1.2rem;
+    right: 1.2rem;
+    font-size: 2.2rem;
     text-decoration: none;
     color: var(--color-white);
     z-index: 100;
@@ -82,7 +96,7 @@ header {
 .navigation {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 1rem 0 0 0;
     display: none;
     flex-direction: column;
     width: 100%;
@@ -101,8 +115,13 @@ header {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.navigation li a.active {
+    background-color: rgba(0, 0, 0, 0.2);
+    text-decoration: underline;
+}
+
 /* =========================================
-   DISCOVER PAGE & CARDS (MOBILE LAYOUT)
+    DISCOVER PAGE CARDS (MOBILE)
 ========================================= */
 #discover-grid {
     display: grid;
@@ -122,7 +141,7 @@ header {
 
 .place-card {
     display: grid;
-    /* CORREÇÃO: Nomes de áreas padronizados e sem erros de grafia */
+    /* Standardized names following larger.css for consistency */
     grid-template-areas:
         "title"
         "photograph"
@@ -134,11 +153,13 @@ header {
     border-radius: 8px;
     border: 1px solid var(--color-border);
     box-shadow: 0 4px 8px rgba(0, 51, 102, 0.1);
+    text-align: center;
 }
 
 .place-card h2 {
     grid-area: title;
     color: var(--color-primary);
+    margin: 0 0 1rem 0;
 }
 
 .place-card figure {
@@ -150,15 +171,19 @@ header {
     width: 100%;
     height: auto;
     border-radius: 5px;
+    margin-bottom: 1rem;
 }
 
 .place-card p {
     grid-area: description;
+    margin: 0.5rem 0 1rem 0;
 }
 
 .place-card address {
     grid-area: location;
     font-weight: bold;
+    margin-bottom: 1rem;
+    font-style: normal;
 }
 
 .place-card button {
@@ -172,11 +197,22 @@ header {
     margin: 0 auto;
 }
 
+#visitor-message {
+    background: var(--color-card-bg);
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
 footer {
     background: var(--color-primary);
     color: white;
     text-align: center;
     padding: 2rem 1rem;
+    width: 100%;
 }
 
 .social {
