@@ -16,13 +16,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Mapping IDs to readable names
         const serviceNames = {
-            "assessment": "Psychopedagogical Assessment",
-            "intervention": "Psychopedagogical Intervention",
-            "family": "Family Guidance",
-            "academic": "Academic Support",
-            "difficulties": "Support for Learning Difficulties",
-            "hospital": "Hospitalized Patient Support"
+            "clinical_assessment": "Clinical Psychopedagogical Assessment",
+            "individual_intervention": "Individual Psychopedagogical Intervention",
+            "family_guidance": "Family Guidance and Mediation",
+            "school_inclusion": "School Inclusion Consultancy",
+            "dyslexia_rehabilitation": "Dyslexia and Literacy Rehabilitation",
+            "math_reasoning": "Dyscalculia and Reasoning Intervention",
+            "executive_training": "Executive Function and ADHD Training",
+            "hospital_support": "Hospital Psychopedagogy",
+            "elderly_stimulation": "Cognitive Stimulation for Seniors",
+            "social_skills": "Social Skills Workshop",
+            "graphomotor_reeducation": "Graphomotor Re-education and Handwriting",
+            "vocational_guidance": "Vocational and Career Guidance",
+            "school_transition": "School Transition Preparation",
+            "anxiety_management": "Anxiety Management and Test Strategies",
+            "adult_support": "Adult and University Psychopedagogy"
         };
+        
         const readableService = serviceNames[service] || service;
 
         if (resultsContainer) {
