@@ -11,6 +11,8 @@
     --color-card-bg: #f9f9f9;
     --color-border: #bccfeb;
     --color-overlay: rgba(0, 51, 102, 0.8);
+    --space-sm: 1rem;
+    /* Adicionado para garantir proximidade e alinhamento */
 }
 
 body {
@@ -20,6 +22,8 @@ body {
 
 main {
     padding: var(--space-sm);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .page-title {
@@ -39,7 +43,8 @@ header {
     flex-direction: column;
     align-items: center;
     position: relative;
-    }
+}
+
 .logo-container {
     display: flex;
     align-items: center;
@@ -53,12 +58,6 @@ header {
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--color-white);
-}
-
-.logo-container span {
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
 }
 
 #menu {
@@ -79,13 +78,6 @@ header {
 #menu.show::before {
     content: "X";
 }
-
-.place-card img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 5px;}
 
 .navigation {
     list-style: none;
@@ -109,18 +101,6 @@ header {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.navigation li a.active {
-    background-color: rgba(0, 0, 0, 0.2);
-    text-decoration: underline;
-}
-
-.navigation li a:hover {
-    background-color: var(--color-accent);
-    color: var(--color-white);
-    transition: 0.3s ease;
-}
-
-
 /* =========================================
    DISCOVER PAGE & CARDS (MOBILE LAYOUT)
 ========================================= */
@@ -131,11 +111,6 @@ header {
         "sidebar"
         "gallery";
     gap: 1.5rem;
-    padding-top: 1rem;
-}
-
-.sidebar {
-    grid-area: sidebar;
 }
 
 .gallery {
@@ -147,24 +122,23 @@ header {
 
 .place-card {
     display: grid;
+    /* CORREÇÃO: Nomes de áreas padronizados e sem erros de grafia */
     grid-template-areas:
-        "name"
+        "title"
         "photograph"
         "description"
-        "loction"
+        "location"
         "button";
     background-color: var(--color-white);
     padding: 1.5rem;
     border-radius: 8px;
     border: 1px solid var(--color-border);
-    text-align: center;
     box-shadow: 0 4px 8px rgba(0, 51, 102, 0.1);
 }
 
 .place-card h2 {
-    grid-area: name;
+    grid-area: title;
     color: var(--color-primary);
-    margin: 0 0 1rem 0;
 }
 
 .place-card figure {
@@ -176,18 +150,15 @@ header {
     width: 100%;
     height: auto;
     border-radius: 5px;
-    margin-bottom: 1.5rem;
 }
 
 .place-card p {
     grid-area: description;
-    margin: 0.5rem 0 1rem 0;
 }
 
 .place-card address {
-    grid-area: loction;
+    grid-area: location;
     font-weight: bold;
-    margin-bottom: 1rem;
 }
 
 .place-card button {
@@ -201,24 +172,11 @@ header {
     margin: 0 auto;
 }
 
-#visitor-message {
-    background: var(--color-card-bg);
-    padding: 1.5rem;
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    text-align: center;
-    font-weight: bold;
-}
-
-/* =========================================
-   FOOTER
-========================================= */
 footer {
     background: var(--color-primary);
     color: white;
     text-align: center;
     padding: 2rem 1rem;
-    width: 100%;
 }
 
 .social {

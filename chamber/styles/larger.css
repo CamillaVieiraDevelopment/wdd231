@@ -1,15 +1,10 @@
 @media screen and (min-width: 1025px) {
-
-    /* HEADER */
     header {
-        display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding: 1rem 5%;
-        align-items: center;
     }
 
-    /* NAVIGATION */
     #menu {
         display: none !important;
     }
@@ -20,106 +15,18 @@
         width: auto;
     }
 
-    .navigation li a:hover {
-        background-color: var(--color-accent);
-        color: var(--color-white);
-        transition: 0.3s ease;
-    }
-
-    /* HOME GRID & HERO */
-    .home-grid {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        grid-template-areas:
-            "hero hero"
-            "events weather"
-            "spotlights spotlights";
-        gap: 1.5rem;
-        padding: 20px;
-    }
-
-    .hero {
-        grid-area: hero;
-        position: relative;
-    }
-
-    .hero-img {
-        width: 100% !important;
-        height: auto !important;
-        object-fit: cover;
-        display: block;
-    }
-
-    .cta-overlay {
-        position: absolute;
-        top: 20%;
-        left: 5%;
-        width: 45%;
-        padding: 2.5rem;
-        background: var(--color-overlay, rgba(0, 51, 102, 0.8));
-        border-radius: 10px;
-        color: var(--color-white);
-        z-index: 5;
-    }
-
-    .cta-overlay h1 {
-        font-size: 2.5rem;
-    }
-
-    /* HOME SECTIONS */
-    .events {
-        grid-area: events;
-        background: var(--color-white);
-        padding: 1.5rem;
-        border-radius: 8px;
-        border-left: 8px solid var(--color-primary);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .weather {
-        grid-area: weather;
-        background: var(--color-bg-light, #e6f2ff);
-        padding: 1.5rem;
-        border-radius: 8px;
-        border: 1px solid var(--color-border);
-        text-align: center;
-    }
-
-    .spotlights {
-        grid-area: spotlights;
-    }
-
-    #business-spotlights,
-    #members.grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
-    }
-
-    /* DISCOVER PAGE */
     #discover-grid {
-        display: grid;
         grid-template-columns: 300px 1fr;
-        grid-template-areas: "sidebar gallery";
         max-width: 1200px;
-        margin: 0 auto;
-        gap: 2rem;
-    }
-
-    .sidebar {
-        grid-area: sidebar;
     }
 
     .gallery {
-        grid-area: gallery;
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        /* Layout em lista horizontal para desktop */
     }
 
-    /* PLACE CARD */
     .place-card {
-        display: grid;
         grid-template-columns: 300px 1fr;
         grid-template-areas:
             "photograph title"
@@ -127,41 +34,10 @@
             "photograph location"
             "photograph button";
         column-gap: 2rem;
-        background: var(--color-white);
-        padding: 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     }
 
-    .place-card h2 {
-        grid-area: title;
-        margin: 0;
-    }
-
-    .place-card figure {
-        grid-area: photograph;
-        margin: 0;
-    }
-
-    .place-card p {
-        grid-area: description;
-    }
-
-    .place-card address {
-        grid-area: location;
-        font-style: normal;
-    }
-
-    .place-card button {
-        grid-area: button;
-        width: fit-content;
-    }
-
-    /* IMAGE HOVER EFFECT */
+    /* EFEITO DE HOVER - Requisito 13 */
     #places-gallery .place-card img {
-        width: 300px;
-        height: 200px;
-        object-fit: cover;
         transition: transform 0.4s ease, filter 0.4s ease;
     }
 
@@ -169,17 +45,5 @@
         filter: brightness(1.1) saturate(1.2);
         transform: scale(1.05);
         cursor: pointer;
-    }
-
-    /* JOIN PAGE */
-    .join-content-wrapper {
-        display: grid;
-        grid-template-columns: 1.2fr 1fr;
-        gap: 3rem;
-    }
-
-    .coin-img {
-        width: 80px !important;
-        height: auto !important;
     }
 }
