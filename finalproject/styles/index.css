@@ -106,6 +106,7 @@ nav a.active {
 
 .welcome-badge {
     background-color: var(--secondary-color);
+    color: var(--accent-color)
     padding: 0.4rem 1rem;
     border-radius: 20px;
     display: inline-block;
@@ -126,7 +127,7 @@ nav a.active {
 /* CTA Button */
 .cta-button {
     background-color: var(--cta-bg-color);
-    color: var(--cta-text-color);
+    color: var(--primary-color);
     padding: 0.8rem 2rem;
     border-radius: 25px;
     text-decoration: none;
