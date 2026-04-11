@@ -1,4 +1,14 @@
 /* styles/form.css */
+/* =====================================================
+General Styles
+===================================================== */
+
+/* No form.css */
+.page-title {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--primary-color);
+}
 
 /* =====================================================
    Scheduling Layout (Grid and Calendar)
