@@ -61,7 +61,7 @@
                 <p class="form-highlight">Please fill out the form below and we will contact you to confirm your
                     session.</p>
 
-                <form method="get" action="appointment_request.html">
+                <form method="get" action="appointment_request.html" novalidate>
 
                     <label for="service">Requested Service</label>
                     <select id="service" name="service" required>
@@ -106,7 +106,7 @@
 
         <dialog id="errorModal">
             <h2>⚠️ Attention</h2>
-            <p>Please enter a valid name before submitting.</p>
+            <p>Please fill in all required fields before submitting.</p>
             <button id="closeModal">Close</button>
         </dialog>
 

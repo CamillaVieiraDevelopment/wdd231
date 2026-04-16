@@ -64,27 +64,32 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 5. FORM SUBMISSION AND LOCAL STORAGE (Maintained exactly as your original)
+    // 5. FORM SUBMISSION AND LOCAL STORAGE
     const appointmentForm = document.querySelector("form");
     if (appointmentForm) {
         appointmentForm.addEventListener("submit", (e) => {
+            // Captura os valores de todos os campos principais
+            const service = document.querySelector("#service").value;
+            const date = document.querySelector("#appointmentDate").value;
+            const time = document.querySelector("#appointmentTime").value;
             const userName = document.querySelector("#username").value;
+            const email = document.querySelector("#email").value;
 
-            if (userName.trim() === "") {
-                e.preventDefault();
+            // Check if any of them is empty
+            if (!service || !date || !time || userName.trim() === "" || email.trim() === "") {
+                e.preventDefault(); // Impede o envio do formulário
                 if (errorModal) {
-                    errorModal.showModal();
+                    errorModal.showModal(); // Mostra o seu modal personalizado!
                 } else {
-                    alert("Please enter a valid name.");
+                    alert("Please fill in all required fields before submitting.");
                 }
             } else {
-                // Data Persistence
+                // Se tudo estiver preenchido, salva no Local Storage e permite o envio
                 localStorage.setItem("lastPatientName", userName);
                 localStorage.setItem("appointmentCount", Number(localStorage.getItem("appointmentCount") || 0) + 1);
             }
         });
     }
-
     // 6. COUNTER UPDATE (Maintained exactly as your original)
     const counterElement = document.querySelector("#counter");
     if (counterElement) {
