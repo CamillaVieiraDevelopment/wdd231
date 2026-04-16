@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Appointment Request - Decole Psychopedagogical Clinic</title>
+    <meta name="description"
+        content="Official home page Decole Psychopedagogical Clinic for cognitive development, learning support, and humanized care.">
+    <meta name="author" content="Camilla Francianne Silva Ribeiro Vieira">
+
+    <meta property="og:title" content="Decole Psychopedagogical Clinic - Appointment Request - Website">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://camillavieiradevelopment.github.io/wdd231/final_project/images/hero_image.png">
+    <meta property="og:url" content="https://camillavieiradevelopment.github.io/wdd231/final_project/index.html">
+    <meta property="og:description" content="Connecting services Psychopedagogicals Clinic in Curitiba. ">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/appointment_request.css">
+
+    <script src="scripts/main.js" type="module"></script>
+    <script src="scripts/request.js" defer></script>
+    
+    
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Decole Clinic Psychopedagogical Logo" loading="lazy">
+            <span>When learning creates wings! 🪽</span>
+        </div>
+
+        <button id="hamburger-menu" aria-label="Abrir menu">☰</button>
+
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="max-width: 800px; margin: 2rem auto; padding: 0 2rem;">
+        <h1 style="color: var(--primary-color);">Thank you for sending your appointment request! 🎉</h1>
+        <p>The appointment request form has been completed; we will contact you to confirm the time.</p>
+
+        <div class="confirmation-box" id="results">
+        </div>
+
+        <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+            You have submitted <span id="counter" style="font-weight: bold; color: var(--secondary-color);">0</span>
+            requests so far.
+        </p>
+
+        <a href="index.html" class="back-btn">Return to Home</a>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> | Camilla Francianne Vieira | Decole Psychopedagogical Clinic</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>

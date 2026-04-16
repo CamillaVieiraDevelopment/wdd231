@@ -1,0 +1,99 @@
+/* styles/contact.css */
+
+.contact-container {
+    padding: 5rem 3rem;
+    background-color: var(--accent-color);
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 1200px;
+}
+
+.method {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.4s ease;
+}
+
+/* Container Circular */
+.circle-icon {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(57, 1, 71, 0.2);
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.circle-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Effect Hover */
+.method:hover .circle-icon {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(57, 1, 71, 0.3);
+}
+
+/* Box Information */
+.info-box {
+    background-color: var(--cta-bg-color);
+    color: var(--primary-color);
+    padding: 20px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    width: 100%;
+    min-height: 90px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+    word-wrap: break-word;
+}
+
+/* E-mail, Celphone or address */
+.info-box span {
+    display: block;
+    font-weight: 400;
+    font-size: 0.95rem;
+    margin-top: 8px;
+}
+
+/* Hover */
+.method:hover .info-box {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+}
+
+/* Responsivity */
+@media (max-width: 768px) {
+    .contact-methods {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .circle-icon {
+        width: 160px;
+        height: 160px;
+    }
+}

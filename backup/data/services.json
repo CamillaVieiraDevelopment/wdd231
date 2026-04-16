@@ -1,0 +1,124 @@
+{
+    "services": [
+        {
+            "id": "clinical_assessment",
+            "name": "Clinical Psychopedagogical Assessment",
+            "price": "$150",
+            "duration": "60 min",
+            "note": "Click to view description",
+            "description": "An in-depth investigation using scientific protocols and clinical observation to identify the origin of learning difficulties and map the patient's cognitive profile."
+        },
+        {
+            "id": "individual_intervention",
+            "name": "Individual Psychopedagogical Intervention",
+            "price": "$120",
+            "duration": "50 min",
+            "note": "Click to view description",
+            "description": "Personalized sessions focused on rehabilitating learning functions, utilizing playful and clinical resources to overcome barriers diagnosed during the assessment."
+        },
+        {
+            "id": "family_guidance",
+            "name": "Family Guidance and Mediation",
+            "price": "$100",
+            "duration": "45 min",
+            "note": "Click to view description",
+            "description": "Specialized consultancy to support and equip the family, aligning household dynamics with the learner's therapeutic needs."
+        },
+        {
+            "id": "school_inclusion",
+            "name": "School Inclusion Consultancy",
+            "price": "$130",
+            "duration": "60 min",
+            "note": "Click to view description",
+            "description": "Direct assistance for educational institutions in developing Individualized Education Programs (IEP) and curricular adaptations for students with specific needs."
+        },
+        {
+            "id": "dyslexia_rehabilitation",
+            "name": "Dyslexia and Literacy Rehabilitation",
+            "price": "$110",
+            "duration": "50 min",
+            "note": "Click to view description",
+            "description": "Intervention focused on phonological awareness and auditory processing, ideal for children in the literacy phase or those with a Dyslexia diagnosis."
+        },
+        {
+            "id": "math_reasoning",
+            "name": "Dyscalculia and Reasoning Intervention",
+            "price": "$110",
+            "duration": "50 min",
+            "note": "Click to view description",
+            "description": "Use of concrete materials and multisensory methods to develop numerical sense and logic, assisting those with severe difficulties regarding mathematical concepts."
+        },
+        {
+            "id": "executive_training",
+            "name": "Executive Function and ADHD Training",
+            "price": "$140",
+            "duration": "50 min",
+            "note": "Click to view description",
+            "description": "Development of organization strategies, impulse control, and working memory, focused on individuals with ADHD or brain-based planning difficulties."
+        },
+        {
+            "id": "hospital_support",
+            "name": "Hospital Psychopedagogy",
+            "price": "$130",
+            "duration": "45 min",
+            "note": "Click to view description",
+            "description": "Pedagogical-therapeutic care for hospitalized patients, aimed at maintaining the connection with learning and providing emotional support during treatment."
+        },
+        {
+            "id": "elderly_stimulation",
+            "name": "Cognitive Stimulation for Seniors",
+            "price": "$125",
+            "duration": "50 min",
+            "note": "Click to view description",
+            "description": "A program for the prevention and maintenance of memory and language in the elderly, aiming for active aging and the preservation of cognitive autonomy."
+        },
+        {
+            "id": "social_skills",
+            "name": "Social Skills Workshop",
+            "price": "$70",
+            "duration": "90 min",
+            "note": "Click to view description",
+            "description": "Group training to develop emotional intelligence, interpretation of social cues, and empathetic interpersonal conflict resolution."
+        },
+        {
+            "id": "graphomotor_reeducation",
+            "name": "Graphomotor Re-education and Handwriting",
+            "price": "$105",
+            "duration": "45 min",
+            "note": "Click to view description",
+            "description": "Work focused on fine motor skills, pencil grip, and legibility, assisting those showing signs of Dysgraphia or excessive slowness in writing."
+        },
+        {
+            "id": "vocational_guidance",
+            "name": "Vocational and Career Guidance",
+            "price": "$150",
+            "duration": "60 min",
+            "note": "Click to view description",
+            "description": "A process of self-knowledge and skill analysis to assist adolescents and adults in professional choices through profile and interest testing."
+        },
+        {
+            "id": "school_transition",
+            "name": "School Transition Preparation",
+            "price": "$90",
+            "duration": "50 min",
+            "note": "Click to view description",
+            "description": "Strategic support for students changing education cycles (e.g., Elementary to Middle School), helping them adapt to new routines and multiple teachers."
+        },
+        {
+            "id": "anxiety_management",
+            "name": "Anxiety Management and Test Strategies",
+            "price": "$110",
+            "duration": "45 min",
+            "note": "Click to view description",
+            "description": "Emotional regulation techniques and specific study methods to face evaluations and entrance exams with greater security, focus, and stress control."
+        },
+        {
+            "id": "adult_support",
+            "name": "Adult and University Psychopedagogy",
+            "price": "$130",
+            "duration": "60 min",
+            "note": "Click to view description",
+            "description": "Support for adults with academic or professional difficulties, focusing on critical reading, academic writing, and productive routine management in higher education."
+        }
+    ]
+}

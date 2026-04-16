@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - Decole Psychopedagogical Clinic</title>
+
+    <meta name="description"
+        content=" Official home page Decole Psychopedagogical Clinic for cognitive development, learning support, and humanized care.">
+    <meta name="author" content="Camilla Francianne Silva Ribeiro Vieira">
+
+    <meta property="og:title" content="Decole Psychopedagogical Clinic - Form - Website">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://camillavieiradevelopment.github.io/wdd231/final_project/images/hero_image.png">
+    <meta property="og:url" content="https://camillavieiradevelopment.github.io/wdd231/final_project/index.html">
+    <meta property="og:description" content="Connecting services Psychopedagogicals Clinic in Curitiba. ">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/form.css">
+
+    <script src="scripts/main.js" type="module"></script>
+    <script src="scripts/form.js" type="module"></script>
+    <script src="scripts/request.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Decole Clinic Psychopedagogical Logo" loading="lazy">
+            <span>When learning creates wings! 🪽</span>
+        </div>
+
+        <button id="hamburger-menu" aria-label="Abrir menu">☰</button>
+
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title">Schedule
+            Appointment</h1>
+
+        <div class="scheduling-grid">
+
+            <section class="form-container">
+                <p class="form-highlight">Please fill out the form below and we will contact you to confirm your
+                    session.</p>
+
+                <form method="get" action="appointment_request.html">
+
+                    <label for="service">Requested Service</label>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Select a Service ...</option>
+                    </select>
+
+                    <label for="appointmentDate">Preferred Date</label>
+                    <input type="date" id="appointmentDate" name="appointmentDate" required>
+
+                    <label for="appointmentTime">Preferred Time (Whole Hours)</label>
+                    <select id="appointmentTime" name="appointmentTime" required>
+                        <option value="" disabled selected>Select one hour...</option>
+                    </select>
+
+                    <label for="notes">Additional Information (Patient's age, specific needs, etc.)</label>
+                    <textarea id="notes" name="notes" placeholder="Tell us a little about your needs..."></textarea>
+
+                    <label for="username">Your Full Name</label>
+                    <input type="text" id="username" name="username" required>
+
+                    <label for="email">Contact Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <input type="submit" value="Request Appointment">
+
+                </form>
+            </section>
+
+            <section class="calendar-sidebar">
+                <h2>Check Available Times</h2>
+                <p>Consult our agenda before choosing your preferred time.</p>
+                <div class="calendar-wrapper">
+                    <iframe
+                        src="https://calendar.google.com/calendar/embed?src=decoleclinicapsicopedagogica%40gmail.com&ctz=America%2FSao_Paulo&mode=WEEK"
+                        style="border: 0" width="100%" height="450" frameborder="0" scrolling="no">
+                    </iframe>
+                    
+                </div>
+            </section>
+
+        </div>
+
+        <dialog id="errorModal">
+            <h2>⚠️ Attention</h2>
+            <p>Please enter a valid name before submitting.</p>
+            <button id="closeModal">Close</button>
+        </dialog>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> | Camilla Francianne Vieira | Decole Psychopedagogical Clinic</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>
