@@ -52,7 +52,7 @@ function displayServices(services) {
             <div class="card-inner">
                 <div class="card-front">
                     <div class="circle-icon">
-                        <img src="images/${service.id}.png" alt="${service.name}" loading="lazy" onerror="this.src='images/logo.png'">
+                        <img src="images/${service.id}.png" alt="${service.name}" width="150" height="150" loading="lazy" onerror="this.src='images/logo.png'">
                     </div>
                     <h3>${service.name}</h3>
                     <p><strong>Duration:</strong> ${service.duration}</p>
